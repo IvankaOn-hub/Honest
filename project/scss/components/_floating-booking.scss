@@ -1,0 +1,193 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.floating-booking {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  min-height: 82px;
+  background: linear-gradient(90deg, rgb(8 8 8), rgb(8 8 8), rgb(8 8 8 / 46%));
+  border-top: 1px solid rgba($color-white, 0.1);
+  backdrop-filter: blur(22px);
+  transition:
+    min-height 0.45s ease,
+    background 0.45s ease,
+    backdrop-filter 0.45s ease;
+
+  &__inner {
+    @include container;
+    min-height: 86px;
+
+    @include tablet{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+
+  &__intro {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    @include tablet{
+      padding: 0;
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    p {
+      margin-right: .25rem;
+
+      @include tablet{
+        font-size: 14px;
+        line-height: 1.2;
+        margin-right: 0;
+      }
+    }
+
+    span {
+      display: block;
+       @include tablet{
+        margin-top: 2px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__form {
+    display: block;
+  }
+
+  &__compact {
+    display: grid;
+    grid-template-columns: minmax(280px, 100%) 36px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    color: $color-white;
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($color-white, 0.18);
+    }
+  }
+
+  &__full {
+    display: none;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-expanded {
+    top: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #e3e3e321, transparent 36%), rgba(8, 8, 8, 0.94);
+    backdrop-filter: blur(28px);
+
+    .floating-booking__inner {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .floating-booking__intro,
+    .floating-booking__compact {
+      display: none;
+    }
+
+    .floating-booking__form {
+      width: min(760px, 100%);
+    }
+
+    .floating-booking__full {
+      display: block;
+    }
+  }
+
+  &__head {
+    margin-bottom: 34px;
+    text-align: center;
+
+    h2 {
+      margin: 14px 0 18px;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    p:not(.eyebrow) {
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+  }
+
+  &__purpose {
+    margin-bottom: 22px;
+    padding: 20px;
+
+    border-radius: $radius-sm;
+
+    background: rgba($color-white, 0.05);
+    border: 1px solid rgba($color-white, 0.08);
+
+    p {
+      margin-bottom: 14px;
+      color: $color-gray;
+      font-size: 14px;
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 22px;
+
+      color: $color-light;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    input {
+      accent-color: $color-blue;
+    }
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    textarea {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 26px;
+  }
+}

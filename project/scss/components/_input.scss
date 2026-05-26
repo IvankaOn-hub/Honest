@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  width: 100%;
+
+  border-radius: $radius-sm;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: $color-white;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+
+  &::placeholder {
+    color: $color-gray;
+  }
+
+  &:focus {
+    border-color: $color-blue-soft;
+    background: rgba($color-white, 0.12);
+  }
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+  min-height: 43px;
+  padding: 0 18px;
+}
+
+textarea {
+  min-height: 120px;
+  padding: 18px;
+  resize: vertical;
+}

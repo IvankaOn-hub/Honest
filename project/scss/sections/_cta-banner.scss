@@ -1,0 +1,109 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cta-banner:not(.white-section){
+   box-shadow: rgba(0, 0, 0, 0.09) 0px 20px 50px, rgb(24 24 24) 0px 0px 24px;
+  background: radial-gradient(circle at 12% 0%, rgba(127, 151, 199, 0.055), transparent 30%), rgb(8, 8, 8);
+  
+  & .cta-banner__image {
+    background: linear-gradient(90deg, rgba(41, 41, 42, 0) 0%, rgba(149, 149, 149, 0.15) 100%), url("../images/cta/car.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+}
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+
+  &.white-section{
+
+    &__inner{
+      background: $color-light;
+      border-radius: $radius-md;
+      color: $color-black;
+
+    }
+
+    & .cta-banner__image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: $transition;
+    background:
+      linear-gradient(90deg, #888888 0%, rgb(36 36 48 / 38%) 18%, rgb(22 22 29 / 8%) 55%, rgb(0 0 0) 100%);
+  }
+
+  }
+
+  &__inner {
+    @include container;
+
+    position: relative;
+    min-height: 28rem;
+    padding: 6rem 2rem;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    
+
+
+    @include desktop {
+      grid-template-columns: 0.9fr 1.1fr;
+      padding: 6rem 5rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    max-width: 46rem;
+  }
+
+  &__text {
+    max-width: 32rem;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: $color-white;
+  }
+
+  &__image {
+    position: absolute;
+    inset: auto 0 0 auto;
+
+    width: 100%;
+    height: 100%;
+
+    
+    background:
+      linear-gradient(
+       70deg, rgb(5 13 25) 0%, rgb(23 23 23 / 16%) 100%
+      ),
+      url("../images/cta/car.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    opacity: .2;
+
+    @include tablet {
+      opacity: 1;
+      
+      clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+      width: 55%;
+      background:
+        linear-gradient(
+        90deg, rgba(41, 41, 42, 0) 0%, rgb(5 5 5 / 16%) 100%
+        ),
+        url("../images/cta/car.png");
+        background-size: cover;
+        background-position: center right;
+        background-repeat: no-repeat;
+      }
+  }
+  .btn {
+    margin-top: 2rem;
+  }
+}

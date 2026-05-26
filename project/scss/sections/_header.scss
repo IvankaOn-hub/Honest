@@ -1,0 +1,232 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-black;
+  border-bottom: 1px solid rgba($color-white, 0.05);
+  backdrop-filter: blur(24px);
+
+  &__wrapper {
+    @include container;
+    @include flex-between;
+    min-height: 90px;
+    position: relative;
+  }
+
+  &__logo {
+    max-width: 100px;
+    z-index: 102;
+    margin-right: 30px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 1;
+
+    a {
+      color: $color-white;
+      font-size: 1.125rem;
+      transition: $transition;
+
+      &:hover {
+        color: $color-gray-light;
+      }
+    }
+  }
+  &__actions{
+    margin-left: auto;
+    margin-right: 1.5rem;
+    @include flex-center;
+    gap: $gap-xl;
+  }
+
+  @include desktop{
+    top: 42px;
+
+     &__burger, &__actions{
+      display: none;
+    }
+  }
+
+
+  .btn--primary {
+    min-height: 40px;
+  }
+
+  @media (max-width: $desktop) {
+
+    &__actions .lang-switcher__current{
+      height: 48px;
+    }
+
+    &__wrapper {
+      min-height: 90px;
+    }
+
+    &__burger {
+      display: flex;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba($color-white, 0.1);
+      border-radius: $radius-sm;
+      background: rgba($color-white, 0.04);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 120;
+
+      span {
+        width: 18px;
+        height: 2px;
+        background: $color-white;
+        border-radius: 20px;
+        transition: $transition;
+      }
+    }
+
+    &__mobile {
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      height: calc(100dvh - 90px);
+      padding: 32px 24px;
+      background: $color-black;
+      backdrop-filter: blur(24px);
+      z-index: 110;
+
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-12px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    &__nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      a {
+        position: relative;
+
+        padding: 20px 0;
+
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: rgba($color-white, 0.92);
+
+        border-bottom: 1px solid rgba($color-white, 0.06);
+
+        transition:
+          color 0.3s ease,
+          padding-left 0.3s ease,
+          transform 0.3s ease;
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          left: -24px;
+          top: 50%;
+
+          width: 0;
+          height: 1px;
+
+          background: #4ea1ff;
+
+          transform: translateY(-50%);
+          transition: width 0.3s ease;
+        }
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          inset: 0;
+
+          background: linear-gradient(
+            90deg,
+            rgba(78, 161, 255, 0.12),
+            transparent
+          );
+
+          opacity: 0;
+          transition: opacity 0.3s ease;
+
+          pointer-events: none;
+        }
+
+        &:hover {
+          color: #ffffff;
+
+          padding-left: 20px;
+
+          transform: translateX(4px);
+
+          &::before {
+            width: 14px;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .btn--primary {
+      width: 100%;
+      min-height: 54px;
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    &.is-open {
+      .header__mobile {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .header__burger {
+        span:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

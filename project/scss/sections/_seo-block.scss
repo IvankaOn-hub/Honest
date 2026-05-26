@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.seo-block {
+  position: relative;
+  overflow: hidden;
+  /* background: radial-gradient(circle at 0% 85%, rgba(127, 151, 199, 0.05), transparent 28%), #050910; */
+
+  &__inner {
+    @include container;
+  }
+
+  &__text {
+    margin-top: 40px;
+    position: relative;
+    line-height: 1.9;
+    transition: max-height 0.5s ease;
+    max-width: 920px;
+
+    p + p {
+      margin-top: 22px;
+    }
+
+    &.is-collapsed {
+      max-height: 185px;
+      overflow: hidden;
+    }
+  }
+
+  &__toggle {
+    margin-top: 34px;
+  }
+}

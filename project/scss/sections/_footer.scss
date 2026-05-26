@@ -1,0 +1,236 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  padding: 72px 0 96px;
+   /* background:
+    radial-gradient(circle at 20% 0%, rgba(127, 151, 199, 0.045), transparent 30%),
+    #050910; */
+
+  border-top: 1px solid rgba($color-white, 0.06);
+
+  &__inner {
+    @include container;
+  }
+  &__top {
+    display: grid;
+
+    @include tablet {
+      gap: 40px;
+
+    }
+    @include desktop {
+      grid-template-columns: 1.15fr 1.25fr 1.25fr;
+      gap: 56px;
+    }
+  }
+
+  &__brand {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include desktop {
+      margin-left: 0;
+      margin-bottom: 0;
+      text-align: left;
+          
+    }
+
+
+    p {
+      margin: 24px 0;
+
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: $gap-sm;
+    margin-bottom: 28px;
+
+    @include desktop {
+      justify-content: left;
+    }
+  }
+
+  &__nav {
+    display: grid;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+  }
+
+  &__column,
+  &__contact {
+    h5 {
+      margin-bottom: 22px;
+
+    }
+
+    ul {
+      display: grid;
+      gap: 12px;
+    }
+
+    a,
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      text-decoration: none;
+
+      transition: color 0.25s ease;
+    }
+
+    a:hover {
+      color: rgba($color-white, 0.9);
+    }
+  }
+
+  &__contact {
+    ul {
+      gap: 14px;
+    }
+
+    li {
+      display: grid;
+      gap: 4px;
+    }
+
+    span {
+      color: rgba(127, 151, 199, 0.7);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__bottom {
+    margin-top: 44px;
+    padding-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+
+    border-top: 1px solid rgba($color-white, 0.06);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p,
+    a {
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    div {
+      display: flex;
+      gap: 28px;
+    }
+
+    a:hover {
+      color: rgba($color-white, 0.78);
+    }
+  }
+}
+
+.footer-accordion {
+  &__trigger {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    border: 0;
+    color: $color-white;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      width: 14px;
+      height: 14px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 12px;
+        height: 1px;
+
+        background: rgba($color-white, 0.7);
+        transition: $transition;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  &.is-open {
+    .footer-accordion__trigger span::after {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+  }
+
+  @media (max-width: $desktop) {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba($color-white, 0.08);
+
+    &__content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    &.is-open {
+      .footer-accordion__content {
+        max-height: 420px;
+        opacity: 1;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  @media (min-width: 767px) {
+    &__trigger {
+      pointer-events: none;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

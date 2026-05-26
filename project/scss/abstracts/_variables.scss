@@ -1,0 +1,51 @@
+// COLORS
+$color-black: #0f0f11; /* #050608 #080808 #080b16*/
+$color-navy: #0f0f11;
+$color-navy-light: #0b1226;
+
+$color-blue: #2f8cff;
+$color-blue-hover: #5996dc;
+$color-blue-soft: #4286D5;/* #6ea8ff */
+$color-blue-light: #7f97c7b8;
+
+$color-white: #f5f5f4;
+
+$color-gray: #8b949e;
+$color-gray-dark: #111317;
+$color-gray-light: #cfd6df;
+
+$color-border: rgba(255, 255, 255, 0.12);
+$color-border-soft: rgba(255, 255, 255, 0.06);
+$color-glass: rgba(255, 255, 255, 0.04);
+$color-glass-hover: rgba(255, 255, 255, 0.08);
+
+$color-light: #f5f5f7;
+$color-dark-gray: #5b6470;
+
+// TYPOGRAPHY
+$font-main: "Inter", sans-serif;
+$font-heading: "Red Hat Display", sans-serif;
+
+// CONTAINER
+$container-width: 90rem;
+$container-padding: 3.5rem;
+$container-padding-mobile: 1.5rem;
+
+// RADIUS
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-full: 62.5rem;
+
+// TRANSITION
+$transition: 0.3s ease;
+
+// BREAKPOINTS
+$mobile: 30rem;
+$tablet: 48rem;
+$desktop: 64rem;
+$wide: 98rem;
+
+// GRID
+$gap-sm: 1rem;
+$gap-md: 1.5rem;
+$gap-xl: 1.875rem;

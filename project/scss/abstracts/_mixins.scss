@@ -1,0 +1,121 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $wide) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $wide;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    padding: 0 56px;
+  }
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-padding {
+  padding: 7.5rem 0;
+
+  @media (max-width: $tablet) {
+    padding: 4.5rem 0;
+  }
+}
+
+@mixin title-h1 {
+  font-family: $font-heading;
+
+  font-size: clamp(2.75rem, 7vw, 4.325rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+@mixin title-h2 {
+  font-family: $font-heading;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+
+}
+
+@mixin title-h3 {
+  font-family: $font-heading;
+
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+@mixin title-h4 {
+  font-family: $font-heading;
+
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+@mixin title-h5 {
+  font-family: $font-heading;
+
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+@mixin body-text {
+  font-family: $font-main;
+
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: -0.015em;
+
+  color: $color-gray-light;
+}
+@mixin body-text-sm {
+  font-family: $font-main;
+
+  font-size: clamp(0.625rem, 1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: -0.015em;
+
+  color: $color-gray-light;
+}

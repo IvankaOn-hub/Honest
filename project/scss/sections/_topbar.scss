@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.topbar{
+  display: none;
+  @include desktop{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    min-height: 42px;
+    background-color: $color-black;
+    border-bottom: 1px solid rgba($color-white, 0.02);
+    backdrop-filter: blur(18px);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+
+    &__inner {
+      @include container;
+      @include flex-center;
+      min-height: 36px;
+
+    }
+
+    &__contacts {
+      display: none;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+      gap: 10px;
+      transition: $transition;
+      
+      &:hover {
+        color: $color-gray-light;
+      }
+    }
+
+    &__actions {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        transition: $transition;
+
+        &:hover {
+          color: $color-gray-light;
+        }
+      }
+    }
+
+    
+
+    &__booking {
+      min-height: 2rem;
+      padding: 0 1rem;
+    }
+
+    @include desktop {
+      &__inner {
+        justify-content: space-between;
+      }
+
+      &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      &__phone,
+      &__address {
+        color: $color-white;
+        transition: $transition;
+
+        &:hover {
+          color: $color-gray-light;
+        }
+      }
+
+      &__actions {
+        width: auto;
+      }
+    }
+  }
+}
+

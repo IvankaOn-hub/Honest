@@ -1,0 +1,141 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.btn {
+  min-height: 46px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-sm;
+  line-height: normal;
+  font-family: $font-main;
+  font-size: .725rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  @include tablet{
+    font-size: .875rem;
+  }
+}
+
+.btn--primary {
+  background: linear-gradient(
+    135deg,
+    $color-blue 0%,
+    $color-blue-soft 100%
+  );
+  color: $color-white;
+
+  &:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(
+      135deg, rgb(17, 100, 202) 0%, rgb(121, 179, 246) 100%
+    );
+  }
+
+   &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($color-white, 0.55),
+      transparent
+    );
+    transform: skewX(-20deg);
+  }
+
+
+  &:hover::before {
+    animation: btnLight 0.8s ease;
+  }
+}
+
+
+
+.btn--ghost {
+  background: rgba($color-white, 0.035);
+  border: 1px solid rgba($color-white, 0.14);
+  backdrop-filter: blur(10px);
+  color: $color-white;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($color-white, 0.55),
+      transparent
+    );
+
+    transform: skewX(-20deg);
+  }
+
+  &:hover {
+    background: rgba($color-white, 0.08);
+    border-color: rgba($color-white, 0.28);
+    color: $color-white;
+    transform: translateY(-3px);
+    &::before {
+    animation: btnLight .9s ease;
+  }
+  }
+}
+
+
+@media(max-width: 768px){
+
+    .btn--primary::before {
+      animation: btnLightMobile 3.5s ease-in-out infinite;
+    }
+    .btn--ghost::before {
+      animation: btnLightMobile 4s ease-in-out infinite;
+    }
+
+  }
+
+
+@keyframes btnLight {
+  from {
+    left: -80%;
+  }
+
+  to {
+    left: 120%;
+  }
+}
+
+@keyframes btnLightMobile {
+  0% {
+    left: -80%;
+  }
+
+  18% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
