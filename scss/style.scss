@@ -11,6 +11,8 @@
 @use "./components/card";
 @use "./components/modal";
 @use "./components/tooltip";
+@use "components/lang-switcher";
+@use "components/sticky-callback";
 
 @use "./sections/topbar";
 @use "./sections/header";

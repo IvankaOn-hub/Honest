@@ -1,3 +1,10 @@
+const params = new URLSearchParams(window.location.search);
+const version = params.get("v");
+
+if (version === "2") {
+  document.body.classList.add("mobile-icons-visible");
+}
+
 //MOBILE MENU
 const header = document.querySelector(".header");
 const burger = document.querySelector(".header__burger");
