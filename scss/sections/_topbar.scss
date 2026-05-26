@@ -19,7 +19,6 @@
       @include container;
       @include flex-center;
       min-height: 36px;
-
     }
 
     &__contacts {
@@ -34,7 +33,7 @@
       transition: $transition;
       
       &:hover {
-        color: $color-gray-light;
+        color: $color-blue-hover;
       }
     }
 
@@ -55,7 +54,7 @@
         transition: $transition;
 
         &:hover {
-          color: $color-gray-light;
+          color: $color-blue-hover;
         }
       }
     }
@@ -84,7 +83,7 @@
         transition: $transition;
 
         &:hover {
-          color: $color-gray-light;
+          color: $color-blue-hover;
         }
       }
 

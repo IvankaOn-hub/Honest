@@ -58,15 +58,18 @@
       transparent
     );
     transform: skewX(-20deg);
+    animation: btnLightMobile 3.5s ease-in-out infinite;
+    @include desktop{
+      animation: none;
+    }
   }
 
-
-  &:hover::before {
-    animation: btnLight 0.8s ease;
+  @include desktop{
+    &:hover::before {
+      animation: btnLight 0.8s ease;
+    }
   }
 }
-
-
 
 .btn--ghost {
   background: rgba($color-white, 0.035);
@@ -88,33 +91,26 @@
       rgba($color-white, 0.55),
       transparent
     );
-
     transform: skewX(-20deg);
+    animation: btnLightMobile 4s ease-in-out infinite;
+    @include desktop{
+      animation: none;
+    }
   }
 
   &:hover {
-    background: rgba($color-white, 0.08);
-    border-color: rgba($color-white, 0.28);
-    color: $color-white;
-    transform: translateY(-3px);
-    &::before {
-    animation: btnLight .9s ease;
+      background: rgba($color-white, 0.08);
+      border-color: rgba($color-white, 0.28);
+      color: $color-white;
+      transform: translateY(-3px);
   }
+
+  @include desktop {
+    &:hover::before {
+      animation: btnLight .9s ease;
+    }
   }
 }
-
-
-@media(max-width: 768px){
-
-    .btn--primary::before {
-      animation: btnLightMobile 3.5s ease-in-out infinite;
-    }
-    .btn--ghost::before {
-      animation: btnLightMobile 4s ease-in-out infinite;
-    }
-
-  }
-
 
 @keyframes btnLight {
   from {

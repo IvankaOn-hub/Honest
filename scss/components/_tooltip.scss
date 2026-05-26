@@ -7,10 +7,8 @@
     content: "";
     position: absolute;
     inset: -3px;
-
     border-radius: 0 $radius-md $radius-md 0;
     border: 1px solid rgba($color-blue, 0.45);
-
     animation: towPulse 1.8s infinite;
   }
 
@@ -18,24 +16,18 @@
     position: absolute;
     left: calc(100% + 14px);
     top: 50%;
-
     min-width: 190px;
     padding: 14px 16px;
-
     transform: translateY(-50%);
-    border-radius: 14px;
-
+    border-radius: $radius-md;
     background: $color-black;
     border: 1px solid rgba($color-blue, 0.35);
     box-shadow: 0 18px 50px rgba($color-black, 0.35);
-
     color: $color-white;
     text-align: left;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transition: 0.25s ease;
 
     &::before {
@@ -44,8 +36,8 @@
       left: -7px;
       top: 50%;
 
-      width: 14px;
-      height: 14px;
+      width: .875rem;
+      height: .875rem;
 
       transform: translateY(-50%) rotate(45deg);
 
@@ -56,7 +48,7 @@
 
     strong {
       display: block;
-      font-size: 14px;
+      font-size: .875rem;
       font-weight: 600;
       line-height: 1.2;
     }
@@ -64,9 +56,9 @@
     small {
       display: block;
       margin-top: 4px;
-      font-size: 12px;
+      font-size: .75rem;
       font-weight: 400;
-      color: rgba($color-white, 0.72);
+      color: $color-gray-light;
     }
   }
 }

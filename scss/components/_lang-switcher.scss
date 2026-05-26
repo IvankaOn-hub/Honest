@@ -34,8 +34,8 @@
     flex-direction: column;
     gap: 4px;
     border: 1px solid rgba($color-white, 0.06);
-    border-radius: 12px;
-    background: red;
+    border-radius: $radius-md;
+    background: $color-black;
     backdrop-filter: blur(20px);
     opacity: 0;
     visibility: hidden;
