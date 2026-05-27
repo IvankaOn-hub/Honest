@@ -19,15 +19,11 @@
     padding-bottom: 3.5rem;
 
     @include tablet{
-        padding: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding: 2.5rem !important;
 
     }
-    
-
     background:
       linear-gradient(135deg, rgba($color-white, 0.04), rgba($color-white, 0.01));
-
       border: 1px solid rgba($color-white, 0.08);
       border-bottom: none;
       border-radius: $radius-md $radius-md 0 0;
@@ -38,6 +34,7 @@
         border-right: none;
         border-radius: $radius-md 0 0 $radius-md;
     }
+
   }
 
 
@@ -50,17 +47,22 @@
 
   &__item {
     padding-bottom: 1rem;
+
+    &:hover strong{
+      color: $color-blue-hover;
+    }
+
     span {
       display: block;
       margin-bottom: 6px;
-
       color: rgba($color-white, 0.45);
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
 
     strong {
+      transition: $transition;
       color: $color-white;
       font-size: 1rem;
       font-weight: 500;
@@ -103,7 +105,6 @@
   }
 
     min-height: 460px;
-
     overflow: hidden;
 
     iframe {

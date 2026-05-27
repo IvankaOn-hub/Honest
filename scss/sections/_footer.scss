@@ -3,15 +3,8 @@
 
 .footer {
   padding: 72px 0 96px;
-   /* background:
-    radial-gradient(circle at 20% 0%, rgba(127, 151, 199, 0.045), transparent 30%),
-    #050910; */
-
   border-top: 1px solid rgba($color-white, 0.06);
 
-  &__inner {
-    @include container;
-  }
   &__top {
     display: grid;
 
@@ -99,7 +92,7 @@
     }
 
     a:hover {
-      color: rgba($color-white, 0.9);
+      color: $color-blue-hover;
     }
   }
 
@@ -114,8 +107,8 @@
     }
 
     span {
-      color: rgba(127, 151, 199, 0.7);
-      font-size: 11px;
+      color: $color-blue-light;
+      font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -150,7 +143,7 @@
     }
 
     a:hover {
-      color: rgba($color-white, 0.78);
+      color: $color-blue-hover;
     }
   }
 }

@@ -26,8 +26,8 @@ openButtons.forEach((button) => {
     bookingPanel.classList.add("is-expanded");
   });
 });
-// EXPAND ON EMAIL FOCUS
 
+// EXPAND ON EMAIL FOCUS
 expandInput.addEventListener("focus", () => {
   bookingPanel.classList.add("is-expanded");
 });
@@ -284,6 +284,21 @@ window.addEventListener('load', initSliders);
 window.addEventListener('resize', initSliders);
 
 
+// Scrool top btn
+const scrollTopBtn = document.querySelector('.js-scroll-top');
+
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('is-visible', window.scrollY > 500);
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
 
 // Brands show all
 /* const brandsSection = document.querySelector(".brands");

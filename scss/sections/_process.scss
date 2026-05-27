@@ -106,10 +106,8 @@
   &__image {
     position: relative; 
     min-height: 430px; 
-
     overflow: hidden;
     isolation: isolate;
-
     border-radius: $radius-md;
     background: $color-black;
 
@@ -120,16 +118,12 @@
     img {
       position: absolute;
       inset: 0;
-
       width: 100%;
       height: 100%;
-
       object-fit: cover;
       object-position: center;
-
       filter: grayscale(0.35) brightness(0.68) contrast(1.1);
       transform: scale(1.02);
-
       transition:
         filter 0.6s ease,
         transform 0.8s ease;
@@ -140,9 +134,7 @@
       position: absolute;
       inset: 0;
       z-index: 2;
-
       background: linear-gradient(180deg, rgba(1, 3, 8, 0.04), rgba(1, 3, 8, 0.58));
-
       pointer-events: none;
     }
 
@@ -151,19 +143,14 @@
       position: absolute;
       inset: 0;
       z-index: 8;
-
       border-radius: inherit;
       padding: 1px;
-
       background: linear-gradient(180deg, rgba(138, 184, 255, 0.32), rgba(245, 247, 251, 0.04));
-
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-
       pointer-events: none;
     }
   }
@@ -171,7 +158,6 @@
   &__lead {
     margin-top: 24px;
     max-width: 440px;
-
     color: rgba($color-white, 0.58);
     font-size: 17px;
     line-height: 1.65;
@@ -179,7 +165,7 @@
 
   &__timeline {
     display: grid;
-    gap: 10px;
+    gap: $gap-md;
    @include desktop {
      margin-top: 44px;
    }
@@ -188,19 +174,14 @@
   &__overlay {
     position: absolute;
     z-index: 5;
-
     border-radius: $radius-md;
     border: 1px solid rgba(127, 151, 199, 0.18);
-
     background: rgba(5, 9, 16, 0.64);
     backdrop-filter: blur(16px);
-
     color: rgba($color-white, 0.8);
-
     opacity: 0;
     transform: translateY(10px);
     pointer-events: none;
-
     transition:
       opacity 0.45s ease,
       transform 0.45s ease;
@@ -219,7 +200,6 @@
   &__overlay--form {
     top: 12%;
     right: 10%;
-
     width: min(300px, 72%);
     padding: 18px;
 
@@ -394,9 +374,7 @@
   border-radius: $radius-md;
   border: 1px solid rgba($color-white, 0.055);
   background: linear-gradient(180deg, rgba($color-white, 0.026), rgba($color-white, 0.012));
-
   cursor: pointer;
-
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
