@@ -4,7 +4,6 @@
 .seo-block {
   position: relative;
   overflow: hidden;
-  /* background: radial-gradient(circle at 0% 85%, rgba(127, 151, 199, 0.05), transparent 28%), #050910; */
 
   &__inner {
     @include container;

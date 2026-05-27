@@ -9,10 +9,10 @@
   background: $color-white;
   color: $color-black;
 
-  & .section__title {
+  & .title-h2 {
     color: $color-black;
   }
-  & p {
+  & p, .eyebrow {
     color: $color-dark-gray;
   }
 
@@ -44,48 +44,30 @@
     background-color: $color-black;
     color: $color-white;
 
-    & h2, h3, p:not(.eyebrow){
+    & h2, h3, p{
       color: $color-white;
     }
 
   }
 }
 
-.section {
-  @include desktop {
-    &__title {
-      max-width: 18ch;
-    }
-  }
-
-  &__head {
+.head-section{
+    margin-bottom: 60px;
+  @include desktop{
     display: grid;
-    gap: $gap-xl;
-    margin-bottom: 30px;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: end;
+    gap: 80px;
+    margin-bottom: 80px;
 
-    @include desktop {
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: end;
-      gap: 80px;
-      margin-bottom: 80px;
-    }
-    
-    &-left {
+    & p{
       max-width: 45ch;
-    }
-    &-right {
-      max-width: 45ch;
-      & p {
-        margin-bottom: 28px;
-      }
     }
   }
 
-  &__title {
-    @include title-h2;
-    margin-top: 1rem;
+  & p{
+    margin-bottom: 1.75rem;
   }
-
 }
 
 .text-center {
@@ -115,12 +97,13 @@
 .eyebrow {
   color: $color-blue-light;
   font-family: $font-main;
-  font-size: 11px;
+  font-size: .7rem;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .icon-round {
@@ -133,30 +116,23 @@
   transition: $transition;
   &:hover{
     background: $color-glass-hover;
+    & i {
+      color: $color-blue-hover;
+    }
   }
+  
 }
 
-.icon {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-  display: block;
-  object-fit: cover;
-  color: currentColor;
+.icon-sm {
+  font-size: 1rem;
+}
 
-  &--sm {
-    width: .875rem;
-    height: .875rem;
-  }
+.icon-md {
+  font-size: 1.25rem;
+}
 
-  &--lg {
-    width: 1.125rem;
-    height: 1.125rem;
-  }
-  &--xl {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
+.icon-lg {
+  font-size: 1.75rem;
 }
 
 .grid {
@@ -188,4 +164,8 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+}
+
+.border-rounded{
+  border-radius: $radius-md;
 }

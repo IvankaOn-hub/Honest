@@ -7,12 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="css/style.css?v=0001" />
   </head>
 
@@ -22,21 +19,24 @@
       <div class="topbar__inner">
         <div class="topbar__contacts">
           <a class="topbar__link" href="tel:504367207">
-            <img class="icon" src="./images/icons/call.svg" alt="Call" />
+            <i class="fa-solid fa-phone icon-sm"></i>
             <span>504 367 207</span>
           </a>
           <a class="topbar__link" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
-            <img class="icon" src="./images/icons/location.svg" alt="Map" />
+            <i class="fa-solid fa-location-dot icon-sm"></i>
             <span>Hetmańska 47A, 04-305 Warszawa</span>
           </a>
         </div>
         <div class="topbar__actions">
           <div class="topbar__socials">
-            <a href="#" aria-label="Instagram">
-              <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
+            <a href="#" aria-label="Telegram">
+              <i class="fa-brands fa-telegram icon-md"></i>
             </a>
-            <a href="#" aria-label="Facebook">
-              <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
+            <a href="#" aria-label="Whatsapp">
+              <i class="fa-brands fa-whatsapp icon-md"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram icon-md"></i>
             </a>
           </div>
           <div class="lang-switcher">
@@ -60,17 +60,9 @@
         </a>
 
         <div class="header__actions">
-          <div class="mobile-icon">
-            <a href="#" aria-label="Instagram">
-              <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
-            </a>
-          </div>
           
           <a class="" href="tel:504367207">
-            <img class="icon icon--xl" src="./images/icons/call.svg" alt="Call" />
+            <i class="fa-solid fa-phone icon-md"></i>
           </a>
           <div class="lang-switcher">
             <button class="lang-switcher__current" type="button">PL</button>
@@ -98,13 +90,16 @@
             <a href="#contact">Kontakt</a>
           </nav>
 
-          <div class="mobile-social-icon">
-            <a href="#" aria-label="Instagram" class="icon-round">
-                <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
-              </a>
-              <a href="#" aria-label="Facebook" class="icon-round">
-                <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
-              </a>
+          <div class="header__mobile-social">
+            <a href="#" class="icon-round" aria-label="Telegram">
+              <i class="fa-brands fa-telegram icon-md"></i>
+            </a>
+            <a href="#" class="icon-round" aria-label="Whatsapp">
+              <i class="fa-brands fa-whatsapp icon-md"></i>
+            </a>
+            <a href="#" class="icon-round" aria-label="Instagram">
+              <i class="fa-brands fa-instagram icon-md"></i>
+            </a>
           </div>
 
           <a class="btn btn--primary" href="tel:+48504367207">Laweta 24/7</a>
@@ -161,11 +156,11 @@
 
       <!-- 08. Reviews -->
       <section class="reviews js-white-bg" id="reviews">
-        <div class="reviews__inner">
-          <div class="reviews__content">
-            <p class="eyebrow">Opinie</p>
+        <div class="container split-layout split-layout--media-right">
+          <div class="reviews__content split-layout__content">
+            <span class="eyebrow">Opinie</span>
 
-            <h2 class="section__title">Co mówią nasi klienci</h2>
+            <h2 class="title-h2">Co mówią nasi klienci</h2>
 
             <p class="reviews__text">Prawdziwe opinie kierowców, którzy powierzają nam swoje samochody.</p>
 
@@ -179,9 +174,9 @@
             <a href="#" class="btn btn--ghost">Zobacz nas na Mapach Google</a>
           </div>
 
-          <div class="reviews-slider tablet-slider swiper js-tablet-slider" data-slider="reviews">
+          <div class="reviews-slider split-layout__media tablet-slider swiper js-tablet-slider" data-slider="reviews">
             <div class="grid grid--2 reviews-grid swiper-wrapper">
-              <article class="review-card swiper-slide">
+              <article class="card review-card swiper-slide">
                 <div class="review-card__stars">★★★★★</div>
 
                 <p>Professional, fair prices and very good contact. The car was ready on time and everything was explained in detail.</p>
@@ -192,7 +187,7 @@
                 </div>
               </article>
 
-              <article class="review-card swiper-slide">
+              <article class="card review-card swiper-slide">
                 <div class="review-card__stars">★★★★★</div>
 
                 <p>Honest and reliable. They diagnosed the problem quickly and fixed it the same day.</p>
@@ -203,7 +198,7 @@
                 </div>
               </article>
 
-              <article class="review-card swiper-slide">
+              <article class="card review-card swiper-slide">
                 <div class="review-card__stars">★★★★★</div>
 
                 <p>Great experience. Transparent pricing, no hidden costs and a very professional team.</p>
@@ -214,7 +209,7 @@
                 </div>
               </article>
 
-              <article class="review-card swiper-slide">
+              <article class="card review-card swiper-slide">
                 <div class="review-card__stars">★★★★★</div>
 
                 <p>I’ve been coming here for years. Always top quality and a friendly atmosphere.</p>
@@ -234,119 +229,99 @@
       <!-- 04. Services -->
       <section class="services js-white-bg">
         <div class="container">
-          <div class="section__head">
-            <div class="section__head-left">
-              <p class="eyebrow">Nasze usługi</p>
-
-              <h2 class="section__title">Precyzyjna pielęgnacja Twojego samochodu</h2>
+          <div class="head-section">
+            <div>
+              <span class="eyebrow">Nasze usługi</span>
+              <h2 class="title-h2">Precyzyjna pielęgnacja Twojego samochodu</h2>
             </div>
-
-            <div class="section__head-right">
+            <div>
               <p>Od diagnostyki po skomplikowane naprawy - zapewniamy jakość na poziomie dealerskim z indywidualnym podejściem.</p>
-
-              <a href="./services.html" class="btn btn--ghost">Wszystkie Usługi</a>
+              <a href="./services.html" class="btn btn--primary">Wszystkie Usługi</a>
             </div>
           </div>
-
           <div class="grid grid--3">
             <a
               href="./services/diagnostics.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Diagnostyka</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
 
             <a
               href="./services/engine-repair.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/naprawa-silnika.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Naprawa silnika</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
 
             <a
               href="./services/suspension-repair.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/naprawa-zawieszenia.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Naprawa zawieszenia</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
 
             <a
               href="./services/brake-system.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/uklad-hamulcowy.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Układ hamulcowy</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
 
             <a
               href="./services/drivetrain-repair.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/naprawa-ukladu-napedowego.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Naprawa układu napędowego</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
 
             <a
               href="./services/additional-services.html"
-              class="service-card card"
+              class="card card--service"
               style="--bg-image: url(&quot;../images/services/blacharstwo-i-lakiernictwo.jpg&quot;)"
             >
-              <div class="service-card__content">
+              <div class="card--service__content">
                 <h3>Blacharstwo i lakiernictwo</h3>
                 <div class="icon-round">
-                  <img src="./images/icons/arrow-right.svg" alt="Arrow right" />
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
             </a>
           </div>
-
-          <div class="services__benefits card">
-            <div class="services__benefit">
-              <div class="services__benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 3L18.5 5.5V11.2C18.5 15.5 15.8 19.4 12 21C8.2 19.4 5.5 15.5 5.5 11.2V5.5L12 3Z"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8.8 12L11 14.2L15.4 9.8"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+          <div class="card card--banner card--banner__benefits">
+            <div class="card--banner__benefit">
+              <div class="card--banner__benefit-icon">
+                <i class="fa-solid fa-shield-halved"></i>
               </div>
               <div>
                 <h4>Oryginalne części i gwarancja</h4>
@@ -354,29 +329,9 @@
               </div>
             </div>
 
-            <div class="services__benefit">
-              <div class="services__benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                  ></path>
-
-                  <path
-                    d="M5 20C5.8 17.2 8.4 15.5 12 15.5C15.6 15.5 18.2 17.2 19 20"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  ></path>
-
-                  <path
-                    d="M17.5 6.5L18.3 8.1L20 8.3L18.8 9.5L19.1 11.2L17.5 10.3L15.9 11.2L16.2 9.5L15 8.3L16.7 8.1L17.5 6.5Z"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+            <div class="card--banner__benefit">
+              <div class="card--banner__benefit-icon">
+                <i class="fa-solid fa-user-gear"></i>
               </div>
               <div>
                 <h4>Naprawy na tysiące kilometrów</h4>
@@ -384,12 +339,9 @@
               </div>
             </div>
 
-            <div class="services__benefit">
-              <div class="services__benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4" />
-                  <path d="M12 7.5V12L15 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+            <div class="card--banner__benefit">
+              <div class="card--banner__benefit-icon">
+                <i class="fa-regular fa-clock"></i>
               </div>
               <div>
                 <h4>Uczciwe podejście do klienta</h4>
@@ -403,20 +355,22 @@
       </section>
 
       <!-- 05. Before / After -->
-      <section class="before-after section white-section" id="before-after">
-        <div class="before-after__inner">
-          <div class="before-after__layout">
-            <div class="before-after__content">
-              <p class="eyebrow">Przed / Po</p>
+      <section class="before-after white-section" id="before-after">
+        <div class="container">
+          <div class="split-layout split-layout--media-right">
+            <div class="split-layout__content">
+              <span class="eyebrow">Przed / Po</span>
 
-              <h2 class="section__title">Prawdziwe transformacje. Profesjonalne rezultaty.</h2>
+              <h2 class="title-h2">Prawdziwe transformacje. Profesjonalne rezultaty.</h2>
 
               <p class="before-after__text">
                 Od zużytych detali po fabryczne wykończenie - każdy samochód otrzymuje uwagę, na jaką zasługuje.
               </p>
+
+              <a href="" class="btn btn--ghost">Portfolio</a>
             </div>
 
-            <div class="comparison">
+            <div class="split-layout__media comparison">
               <img
                 class="comparison__image comparison__image--after"
                 src="./images/before-after/headlight-restoration-after.jpg"
@@ -440,7 +394,7 @@
 
           <div class="before-after__projects card">
             <div class="before-after__projects-head">
-              <p class="eyebrow">Więcej transformacji</p>
+              <span class="eyebrow">Więcej transformacji</span>
               <h3>Każdy samochód ma swoją historię.</h3>
               <p>Here are a few we’re proud of.</p>
             </div>
@@ -506,32 +460,23 @@
       </section>
 
       <!-- 06. About Company -->
-      <section class="about section" id="about">
-        <div class="about__inner">
-          <div class="about__content">
-            <p class="eyebrow">O nas</p>
-
-            <h2 class="section__title">Serwis samochodowy klasy premium z uczciwym podejściem.</h2>
-
-            <div class="about__text">
+      <section class="about" id="about">
+        <div class="container split-layout split-layout--equal split-layout--reverse">
+          <div class="split-layout__content">
+            <span class="eyebrow">O nas</span>
+            <h2 class="title-h2">Serwis samochodowy klasy premium z uczciwym podejściem.</h2>
               <p>
                 Tworzymy usługę, w której klient otrzymuje nie tylko naprawę, ale także przejrzyste, komfortowe i wysokiej jakości usługi
                 związane z konserwacją samochodu.
               </p>
-
               <p>
                 Nasz zespół pracuje z dbałością o szczegóły, korzysta z nowoczesnego sprzętu i wyjaśnia każdy etap pracy przed
                 przystąpieniem do dalszych działań.
               </p>
-            </div>
+            <a href="/about-us" class="btn btn--ghost">Przeczytaj więcej</a>
           </div>
-          <div class="about__media">
-            <!-- <img
-              class="about__image"
-              src="./images/about/about.jpg"
-              alt="Honest Car Service"
-            /> -->
-            <img class="about__image" src="./images/about/german-cars-specialization.jpg" alt="Honest Car Service" />
+          <div class="split-layout__media">
+            <img class="border-rounded" src="./images/about/german-cars-specialization.jpg" alt="Honest Car Service" />
           </div>
         </div>
       </section>
@@ -540,9 +485,9 @@
       <section class="cta-banner js-white-bg">
         <div class="cta-banner__inner">
           <div class="cta-banner__content">
-            <p class="eyebrow">Zarezerwuj usługę</p>
+            <span class="eyebrow">Zarezerwuj usługę</span>
 
-            <h2 class="section__title">Twój samochód zasługuje na najlepszą opiekę.</h2>
+            <h2 class="title-h2">Twój samochód zasługuje na najlepszą opiekę.</h2>
 
             <p class="cta-banner__text">Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach.</p>
 
@@ -553,18 +498,14 @@
       </section>
 
       <!-- 09. Car Brands -->
-      <section class="brands section white-section" id="brands">
-        <div class="brands__inner">
-          <div class="brands__content">
-            <p class="eyebrow">Marki, które obsługujemy</p>
-
-            <h2 class="section__title">Współpracujemy ze wszystkimi głównymi markami</h2>
-
+      <section class="brands white-section" id="brands">
+        <div class="container split-layout split-layout--media-left split-layout split-layout--reverse">
+          <div class="split-layout__content">
+            <span class="eyebrow">Marki, które obsługujemy</span>
+            <h2 class="title-h2">Współpracujemy ze wszystkimi głównymi markami</h2>
             <p>Nasi specjaliści mają doświadczenie w pracy z szeroką gamą marek i modeli.</p>
-
-            <button class="btn btn--ghost js-show-all-brands d-xl-block">Pokaż wszystkie</button>
           </div>
-          <div class="brands-slider tablet-slider swiper js-tablet-slider" data-slider="brands">
+          <div class="split-layout__media brands-slider always-slider" data-slider="brands">
             <div class="brands__grid swiper-wrapper">
               <div class="brand-card swiper-slide">
                 <img src="./images/brands/bmw.png" alt="Logo Brands" />
@@ -602,35 +543,35 @@
                 <img src="./images/brands/volvo.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/land-rover.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/skoda.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/ford.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/kia.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/jeep.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/nissan.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/mitsubishi.png" alt="Logo Brands" />
               </div>
 
-              <div class="brand-card is-hidden swiper-slide">
+              <div class="brand-card swiper-slide">
                 <img src="./images/brands/suzuki.png" alt="Logo Brands" />
               </div>
             </div>
@@ -641,16 +582,15 @@
       </section>
 
       <!-- 11. Service Process -->
-      <section class="process section" id="process" data-step="form">
+      <section class="process" id="process" data-step="form">
         <div class="process__inner">
-          <div class="section__head">
-            <div class="section__head-left">
-              <p class="eyebrow">Jak pracujemy</p>
+          <div class="head-section">
+            <div>
+              <span class="eyebrow">Jak pracujemy</span>
 
-              <h2 class="section__title">Jak korzystać z naszych usług?</h2>
+              <h2 class="title-h2">Jak korzystać z naszych usług?</h2>
             </div>
-
-            <div class="section__head-right">
+            <div>
               <p>Prosty proces, pełna opieka i najwyższa jakość na każdym etapie.</p>
 
               <button class="btn btn--ghost js-open-booking d-xl-block">Umów wizytę</button>
@@ -732,15 +672,15 @@
       </section>
 
       <!-- 12. FAQ -->
-      <section class="faq section js-white-bg" id="faq">
-        <div class="faq__inner">
-          <div class="faq__content">
-            <p class="eyebrow">FAQ</p>
+      <section class="faq js-white-bg" id="faq">
+        <div class="container split-layout split-layout--media-right">
+          <div class="split-layout__content">
+            <span class="eyebrow">FAQ</span>
 
-            <h2 class="section__title">Często zadawane pytania</h2>
+            <h2 class="title-h2">Często zadawane pytania</h2>
           </div>
 
-          <div class="faq__accordion card">
+          <div class="split-layout__media faq__accordion card">
             <details class="faq-item" open>
               <summary>
                 Ile czasu zajmuje typowa naprawa?
@@ -797,9 +737,9 @@
         <div class="seo-block__inner">
           <div class="seo-block__card">
             <div class="seo-block__content">
-              <p class="eyebrow">O naszym serwisie</p>
+              <span class="eyebrow">O naszym serwisie</span>
 
-              <h2 class="section__title">Profesjonalny serwis samochodowy i uczciwe podejście.</h2>
+              <h2 class="title-h2">Profesjonalny serwis samochodowy i uczciwe podejście.</h2>
 
               <div class="seo-block__text is-collapsed" id="seoText">
                 <p>
@@ -831,83 +771,86 @@
       </section>
 
       <!-- 14. Blog -->
-      <section class="blog-preview section" id="blog">
-        <div class="blog-preview__inner">
-          <div class="blog-preview__head">
-            <p class="eyebrow">Blog</p>
+      <section class="blog-preview section-head" id="blog">
+        <div class="container split-layout split-layout--media-left split-layout--reverse">
+          <div class="split-layout__content">
+            <span class="eyebrow">Blog</span>
 
-            <h2 class="section__title">Porady, wiadomości i spostrzeżenia</h2>
+            <h2 class="title-h2">Porady, wiadomości i spostrzeżenia</h2>
 
             <a href="./blog.html" class="btn btn--ghost">Zobacz wszystkie</a>
           </div>
-          <div class="blog-preview__grid">
-            <article class="blog-card">
-              <a href="./blog/when-change-tires.html">
-                <img src="./images/blog/pre-purchase-inspection.jpg" alt="Car tire service" />
-              </a>
-
-              <div class="blog-card__content">
-                <p class="blog-card__category">Porady</p>
-
-                <h5>
-                  <a href="./blog/when-change-tires.html">Kiedy należy wymienić opony?</a>
-                </h5>
-
-                <a href="./blog/when-change-tires.html" class="blog-card__link">
-                  Więcej
-                  <span>→</span>
+          <div class="split-layout__media blog-slider tablet-slider swiper js-tablet-slider" data-slider="blog">
+            <div class="swiper-wrapper grid grid--3">
+              <article class="blog-card swiper-slide">
+                <a href="./blog/when-change-tires.html">
+                  <img src="./images/blog/pre-purchase-inspection.jpg" alt="Car tire service" />
                 </a>
-              </div>
-            </article>
 
-            <article class="blog-card">
-              <a href="./blog/car-needs-service.html">
-                <img src="./images/blog/tow-truck-assistance.jpg" alt="Mechanic checking engine" />
-              </a>
+                <div class="blog-card__content">
+                  <p class="blog-card__category">Porady</p>
 
-              <div class="blog-card__content">
-                <p class="blog-card__category">Konserwacja</p>
+                  <h5>
+                    <a href="./blog/when-change-tires.html">Kiedy należy wymienić opony?</a>
+                  </h5>
 
-                <h5>
-                  <a href="./blog/car-needs-service.html">5 oznak, że samochód wymaga uwagi</a>
-                </h5>
+                  <a href="./blog/when-change-tires.html" class="blog-card__link">
+                    Więcej
+                    <span>→</span>
+                  </a>
+                </div>
+              </article>
 
-                <a href="./blog/car-needs-service.html" class="blog-card__link">
-                  Więcej
-                  <span>→</span>
+              <article class="blog-card swiper-slide">
+                <a href="./blog/car-needs-service.html">
+                  <img src="./images/blog/tow-truck-assistance.jpg" alt="Mechanic checking engine" />
                 </a>
-              </div>
-            </article>
 
-            <article class="blog-card">
-              <a href="./blog/change-oil.html">
-                <img src="./images/blog/oil-service-periodic-maintenance-cover.jpg" alt="Oil change service" />
-              </a>
+                <div class="blog-card__content">
+                  <p class="blog-card__category">Konserwacja</p>
 
-              <div class="blog-card__content">
-                <p class="blog-card__category">Serwice</p>
+                  <h5>
+                    <a href="./blog/car-needs-service.html">5 oznak, że samochód wymaga uwagi</a>
+                  </h5>
 
-                <h5>
-                  <a href="./blog/change-oil.html">Jak często należy wymieniać olej?</a>
-                </h5>
+                  <a href="./blog/car-needs-service.html" class="blog-card__link">
+                    Więcej
+                    <span>→</span>
+                  </a>
+                </div>
+              </article>
 
-                <a href="./blog/change-oil.html" class="blog-card__link">
-                  Więcej
-                  <span>→</span>
+              <article class="blog-card swiper-slide">
+                <a href="./blog/change-oil.html">
+                  <img src="./images/blog/oil-service-periodic-maintenance-cover.jpg" alt="Oil change service" />
                 </a>
-              </div>
-            </article>
+
+                <div class="blog-card__content">
+                  <p class="blog-card__category">Serwice</p>
+
+                  <h5>
+                    <a href="./blog/change-oil.html">Jak często należy wymieniać olej?</a>
+                  </h5>
+
+                  <a href="./blog/change-oil.html" class="blog-card__link">
+                    Więcej
+                    <span>→</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="blog-slider__pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
 
       <!-- 16. Contact -->
-      <section class="contact section white-section" id="contact">
+      <section class="contact section-head white-section" id="contact">
         <div class="contact__inner">
           <div class="grid grid--2">
             <div class="contact__content card">
-              <p class="eyebrow">Kontakt</p>
-              <h2 class="section__title">Umów wizytę lub skontaktuj się z nami</h2>
+              <span class="eyebrow">Kontakt</span>
+              <h2 class="title-h2">Umów wizytę lub skontaktuj się z nami</h2>
 
               <div class="contact__list">
                 <a href="tel:+48504367207" class="contact__item">
@@ -932,11 +875,14 @@
               </div>
 
               <div class="contact__socials">
-                <a href="#" aria-label="Instagram" class="icon-round">
-                  <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
+                <a href="#" class="icon-round" aria-label="Telegram">
+                  <i class="fa-brands fa-telegram icon-md"></i>
                 </a>
-                <a href="#" aria-label="Facebook" class="icon-round">
-                  <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
+                <a href="#" class="icon-round" aria-label="Whatsapp">
+                  <i class="fa-brands fa-whatsapp icon-md"></i>
+                </a>
+                <a href="#" class="icon-round" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram icon-md"></i>
                 </a>
               </div>
 
@@ -966,11 +912,14 @@
             <p>Profesjonalny serwis samochodowy w Warszawie. Uczciwe podejście, jakość, której możesz zaufać.</p>
 
             <div class="footer__socials">
-              <a href="#" aria-label="Instagram" class="icon-round">
-                <img src="./images/icons/instagram.svg" alt="Instagram" class="icon icon--lg" />
+              <a href="#" class="icon-round" aria-label="Telegram">
+                <i class="fa-brands fa-telegram icon-md"></i>
               </a>
-              <a href="#" aria-label="Facebook" class="icon-round">
-                <img src="./images/icons/facebook.svg" alt="Facebook" class="icon icon--lg" />
+              <a href="#" class="icon-round" aria-label="Whatsapp">
+                <i class="fa-brands fa-whatsapp icon-md"></i>
+              </a>
+              <a href="#" class="icon-round" aria-label="Instagram">
+                <i class="fa-brands fa-instagram icon-md"></i>
               </a>
             </div>
 
@@ -1059,7 +1008,7 @@
       <strong>Zamów lawetę</strong>
       <small>Kliknij, aby zamówić lawete</small>
     </span>
-    <img class="icon icon--xl" src="images/icons/truck.png" alt="Icon Truck">
+      <img class="sticky-callback__icon" src="images/icons/truck.png" alt="Icon Truck">
     </button>
 
     <!-- Callback Modal -->
@@ -1091,13 +1040,12 @@
         <form class="floating-booking__form">
           <div class="floating-booking__compact">
             <input class="floating-booking__email js-expand-booking" type="email" placeholder="Twój email" required />
-
             <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
           </div>
 
           <div class="floating-booking__full">
             <div class="floating-booking__head">
-              <p class="eyebrow">Szybka rezerwacja</p>
+              <span class="eyebrow">Szybka rezerwacja</span>
               <h2>Umów się na wizytę lub uzyskaj ocenę usługi</h2>
               <p>Wypełnij krótki formularz, a skontaktujemy się z Tobą w celu wyjaśnienia szczegółów.</p>
             </div>
@@ -1117,16 +1065,14 @@
             </div>
 
             <div class="floating-booking__fields">
+              <input type="text" placeholder="Twoje imię" required/>
+              <input type="tel" placeholder="Telefon" required/>
               <input type="email" placeholder="E-mail" />
-              <input type="text" placeholder="Twoje imię" />
-              <input type="tel" placeholder="Telefon" />
-              <input type="text" placeholder="Ostatnie 7 cyfr numeru VIN" />
               <textarea placeholder="Wiadomość"></textarea>
             </div>
 
             <div class="floating-booking__actions">
               <button class="btn btn--primary" type="submit">Wyślij</button>
-
               <button class="btn btn--ghost js-collapse-booking" type="button">Wróć</button>
             </div>
           </div>
@@ -1135,7 +1081,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
     <script src="js/main.js"></script>
   </body>
 </html>

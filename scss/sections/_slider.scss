@@ -1,3 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.always-slider{
+
+  overflow: hidden;
+  padding-bottom: 42px;
+  
+  & .swiper-wrapper {
+      display: flex !important;
+      width: 100%;
+      min-width: 0;
+      gap: 0 !important;
+    }
+
+  & .swiper-slide {
+      width: auto;
+      min-width: 0;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+  & .swiper-pagination {
+      display: block;
+      bottom: -1rem !important;
+      position: relative;
+    }
+}
+
 .tablet-slider {
   width: 100%;
   max-width: 100%;
@@ -13,6 +42,13 @@
   }
 }
 
+.swiper-pagination-bullet{
+  height: .725rem;
+  width: .725rem;
+}
+.swiper-pagination-bullet-active{
+  background: $color-blue;
+}
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
   background: #b4b6baa1;
 }

@@ -32,6 +32,14 @@
     align-items: center;
     gap: 30px;
     flex: 1;
+    &-social{
+      @include flex-center;
+      gap: $gap-sm;
+
+      @include desktop{
+        display: none;
+      }
+    }
   }
 
   &__nav {
@@ -46,7 +54,7 @@
       transition: $transition;
 
       &:hover {
-        color: $color-gray-light;
+        color: $color-blue-hover;
       }
     }
   }

@@ -1,10 +1,3 @@
-const params = new URLSearchParams(window.location.search);
-const version = params.get("v");
-
-if (version === "2") {
-  document.body.classList.add("mobile-icons-visible");
-}
-
 //MOBILE MENU
 const header = document.querySelector(".header");
 const burger = document.querySelector(".header__burger");
@@ -101,47 +94,6 @@ comparisons.forEach((comparison) => {
     isDragging = false;
   });
 });
-
-
-/* const comparisons = document.querySelectorAll(".comparison, .comparison-mini");
-comparisons.forEach((comparison) => {
-  const beforeImage = comparison.querySelector(
-    ".comparison__image--before, .comparison-mini__image--before"
-  );
-  const line = comparison.querySelector(
-    ".comparison__line, .comparison-mini__line"
-  );
-  const handle = comparison.querySelector(
-    ".comparison__handle, .comparison-mini__handle"
-  );
-  if (!beforeImage || !line || !handle) return;
-  const updateComparison = (event) => {
-    const rect = comparison.getBoundingClientRect();
-    const position = ((event.clientX - rect.left) / rect.width) * 100;
-    const clamped = Math.max(0, Math.min(position, 100));
-    beforeImage.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
-    line.style.left = `${clamped}%`;
-    handle.style.left = `${clamped}%`;
-  };
-  comparison.addEventListener("pointermove", updateComparison);
-  comparison.addEventListener("pointerdown", updateComparison);
-}); */
-
-// Process Working
-/* const processSection = document.querySelector(".process");
-const processSteps = document.querySelectorAll(".process-step");
-processSteps.forEach((step) => {
-  step.addEventListener("mouseenter", () => {
-    processSteps.forEach((item) => item.classList.remove("is-active"));
-    step.classList.add("is-active");
-    processSection.dataset.step = step.dataset.step;
-  });
-  step.addEventListener("click", () => {
-    processSteps.forEach((item) => item.classList.remove("is-active"));
-    step.classList.add("is-active");
-    processSection.dataset.step = step.dataset.step;
-  });
-}); */
 
 // Process Working
 const processSection = document.querySelector(".process");
@@ -264,6 +216,7 @@ const sliderSettings = {
   },
 
   brands: {
+    always: true,
     slidesPerView: 2.2,
     spaceBetween: 16,
     breakpoints: {
@@ -271,22 +224,42 @@ const sliderSettings = {
         slidesPerView: 3,
         spaceBetween: 20,
       },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      }
+    },
+  },
+
+  blog: {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
   },
 };
 
-function initTabletSliders() {
-  const tabletSliders = document.querySelectorAll('.js-tablet-slider');
+function initSliders() {
+  const allSliders = document.querySelectorAll('[data-slider]');
 
-  tabletSliders.forEach((slider) => {
+  allSliders.forEach((slider) => {
     const sliderName = slider.dataset.slider;
     const config = sliderSettings[sliderName];
 
     if (!config || typeof Swiper === 'undefined') return;
 
-    if (tabletBreakpoint.matches && !sliders.has(slider)) {
+    const shouldAlwaysRun = config.always === true;
+    const shouldRun = shouldAlwaysRun || tabletBreakpoint.matches;
+
+    if (shouldRun && !sliders.has(slider)) {
+      const { always, ...swiperConfig } = config;
+
       const swiper = new Swiper(slider, {
-        ...config,
+        ...swiperConfig,
         speed: 600,
         grabCursor: true,
         watchOverflow: true,
@@ -300,20 +273,20 @@ function initTabletSliders() {
       sliders.set(slider, swiper);
     }
 
-    if (!tabletBreakpoint.matches && sliders.has(slider)) {
+    if (!shouldRun && sliders.has(slider)) {
       sliders.get(slider).destroy(true, true);
       sliders.delete(slider);
     }
   });
 }
 
-window.addEventListener('load', initTabletSliders);
-window.addEventListener('resize', initTabletSliders);
+window.addEventListener('load', initSliders);
+window.addEventListener('resize', initSliders);
 
 
 
 // Brands show all
-const brandsSection = document.querySelector(".brands");
+/* const brandsSection = document.querySelector(".brands");
 const brandsBtn = document.querySelector(".js-show-all-brands");
 const brandCards = document.querySelectorAll(".brands .brand-card");
 
@@ -335,4 +308,4 @@ if (brandsSection && brandsBtn && brandCards.length) {
 
     brandsBtn.textContent = isExpanded ? "Pokaż mniej" : "Pokaż wszystkie";
   });
-}
+} */

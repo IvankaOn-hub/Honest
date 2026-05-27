@@ -11,16 +11,15 @@
 @use "./components/card";
 @use "./components/modal";
 @use "./components/tooltip";
-@use "components/lang-switcher";
-@use "components/sticky-callback";
+@use "./components/lang-switcher";
+@use "./components/sticky-callback";
+@use "./components/split-layout";
 
 @use "./sections/topbar";
 @use "./sections/header";
 @use "./sections/hero";
 @use "./sections/footer";
-@use "./sections/services";
 @use "./sections/before-after";
-@use "./sections/about";
 @use "./sections/reviews";
 @use "./sections/brands";
 @use "./sections/process";

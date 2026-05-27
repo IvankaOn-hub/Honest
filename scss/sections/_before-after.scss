@@ -11,37 +11,6 @@
 }
 
 .before-after {
-  background:
- rgba($color-black, 0.1),
-url(../images/before-after/bg-garage.jpg);
-background-size: cover;
-background-attachment: fixed;
-  
-  &__inner {
-    @include container;
-  }
-
-  &__layout {
-    display: grid;
-    gap: 40px;
-
-    @include desktop {
-      grid-template-columns: 0.34fr 0.66fr;
-      align-items: center;
-      gap: 56px;
-    }
-  }
-
-  &__content {
-    max-width: 420px;
-  }
-
-  &__text {
-    margin-top: 28px;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.7;
-  }
 
   &__projects {
     margin-top: 56px;
@@ -74,7 +43,9 @@ background-attachment: fixed;
       line-height: 1;
       letter-spacing: -0.055em;
     }
-
+    & .eyebrow{
+      color: $color-blue-light !important;
+    }
   }
 
   &__actions {
@@ -188,7 +159,6 @@ background-attachment: fixed;
 }
 
 .project-card {
-
   h4 {
     margin-top: 14px;
     font-size: 1rem;

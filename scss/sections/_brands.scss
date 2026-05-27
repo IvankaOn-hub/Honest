@@ -2,34 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .brands {
-
-  &__inner {
-    @include container;
-
-    display: grid;
-    gap: 36px;
-
-    @include desktop {
-      grid-template-columns: 0.68fr 0.32fr;
-      gap: 72px;
-    }
-  }
-
-  &__content {
-    p:not(.eyebrow) {
-      margin: 24px 0;
-      max-width: 300px;
-
-      font-weight: 300;
-      line-height: 1.7;
-    }
-    @include desktop {
-      order: 2;
-    }
-
-  }
-
-  &__grid {
+  // todo
+/*   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $gap-md;
@@ -41,7 +15,7 @@
       order: 1;
     }
   }
-
+ */
   &__actions {
     grid-column: 1 / -1;
 

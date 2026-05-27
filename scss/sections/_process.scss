@@ -4,7 +4,6 @@
 .process-mobile-info {
   display: none;
 }
-
 @media (max-width: 768px) {
   .process__grid {
     display: flex;
@@ -29,7 +28,6 @@
         font-size: 1rem;
       }
     }
-    
   }
 
   .process-step {
@@ -392,12 +390,9 @@
   display: grid;
   grid-template-columns: 50px 1fr;
   gap: 24px;
-
   padding: 26px;
-
   border-radius: $radius-md;
   border: 1px solid rgba($color-white, 0.055);
-
   background: linear-gradient(180deg, rgba($color-white, 0.026), rgba($color-white, 0.012));
 
   cursor: pointer;
@@ -410,9 +405,7 @@
   &:hover,
   &.is-active {
     transform: translateY(-2px);
-
     border-color: rgba(127, 151, 199, 0.26);
-
     background: linear-gradient(180deg, rgba(127, 151, 199, 0.052), rgba($color-white, 0.016));
 
     .process-step__number {
@@ -422,13 +415,11 @@
 
   &__number {
     color: rgba($color-white, 0.24);
-
     font-family: $font-heading;
     font-size: 44px;
     font-weight: 300;
     line-height: 1;
     letter-spacing: -0.06em;
-
     transition: color 0.35s ease;
   }
 
@@ -443,7 +434,6 @@
 
   p {
     margin-top: 12px;
-
     font-size: 15px;
     font-weight: 300;
     line-height: 1.65;

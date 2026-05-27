@@ -21,22 +21,6 @@
   opacity: 0.5;
   z-index: -1;
 }
-
- 
-
-  &__inner {
-    @include container;
-
-    display: grid;
-    gap: 48px;
-
-    @include desktop {
-      grid-template-columns: 0.35fr 0.65fr;
-      align-items: start;
-      gap: 72px;
-    }
-  }
-
  
   &__accordion {
     backdrop-filter: blur(8px);

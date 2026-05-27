@@ -59,11 +59,14 @@
       }
     }
 
-    
-
     &__booking {
+      border: 2px solid $color-white;
       min-height: 2rem;
       padding: 0 1rem;
+
+      &:hover{
+        border-color: $color-white;
+      }
     }
 
     @include desktop {

@@ -1,69 +1,14 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.blog-preview {
- /*  background:
-linear-gradient(
-180deg,
-#07101f,
-#0b1226
-); */
-   /*  background:
-    radial-gradient(circle at 85% 0%, rgba(127, 151, 199, 0.05), transparent 28%),
-    #050910; */
-
-  &__inner {
-    @include container;
-
-    display: grid;
-    gap: 40px;
-
-    @include desktop {
-      grid-template-columns: 0.68fr 0.32fr;
-      align-items: stretch;
-      gap: 56px;
-    }
-  }
-
-  &__head {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    .section__title {
-      margin: 18px 0 32px;
-    }
-
-    @include desktop {
-      order: 2;
-    }
-  }
-
-  &__grid {
-    display: grid;
-    gap: $gap-md;
-
-    @include tablet {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @include desktop {
-      order: 1;
-    }
-  }
-}
 
 .blog-card {
   min-height: 360px;
-
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
-
   border-radius: $radius-md;
   border: 1px solid rgba($color-white, 0.06);
-
   background:
     linear-gradient(
       180deg,
