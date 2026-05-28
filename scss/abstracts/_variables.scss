@@ -1,26 +1,21 @@
 // COLORS
 $color-black: #0f0f11;
-$color-navy: #0f0f11;
-$color-navy-light: #0b1226;
 
 $color-blue: #2f8cff;
-$color-blue-hover: #aacefa; 
+$color-blue-hover: #aacefa;
 $color-blue-soft: #4286D5;
 $color-blue-light: #7f97c7b8;
-
 $color-white: #f5f5f4;
 
 $color-gray: #8b949e;
-$color-gray-dark: #111317;
 $color-gray-light: #cfd6df;
+$color-dark-gray: #5b6470;
 
 $color-border: rgba(255, 255, 255, 0.12);
-$color-border-soft: rgba(255, 255, 255, 0.06);
+$color-border-hover: rgba(127, 151, 199, 0.24);
 $color-glass: rgba(255, 255, 255, 0.04);
 $color-glass-hover: rgba(255, 255, 255, 0.08);
 
-$color-light: #f5f5f7;
-$color-dark-gray: #5b6470;
 
 // TYPOGRAPHY
 $font-main: "Inter", sans-serif;
@@ -40,10 +35,10 @@ $radius-full: 62.5rem;
 $transition: 0.3s ease;
 
 // BREAKPOINTS
-$mobile: 30rem;  // 480
-$tablet: 48rem;  // 768
+$mobile: 30rem; // 480
+$tablet: 48rem; // 768
 $desktop: 64rem; // 1024
-$wide: 98rem;    // 1568
+$wide: 98rem; // 1568
 
 // GRID
 $gap-sm: 1rem;

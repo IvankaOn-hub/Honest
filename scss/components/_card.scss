@@ -10,7 +10,8 @@
   transition:
     transform $transition,
     border-color $transition,
-    background $transition;
+    background $transition,
+    box-shadow $transition;
     border: 1px solid rgba($color-white, 0.08);
 
   &:not(.card--image){
@@ -18,7 +19,32 @@
   } 
 
   &:hover {
-    border-color: rgba(127, 151, 199, 0.24);
+    border-color: $color-border-hover;
+
+    & .card__number{
+      color: rgba(127, 151, 199, 0.9);
+    }
+  }
+
+
+  &__number{
+    margin-bottom: 2rem;
+    display: block;
+    color: rgba(245, 245, 244, 0.24);
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    transition: color 0.35s ease;
+    
+  }
+  &__actions{
+    margin-top: 2rem;
+  }
+  
+  & h3{
+    margin-bottom: 1rem;
   }
 
   &--service {
@@ -118,7 +144,87 @@
         color: $color-gray;
       }
     }
+
   }
+
+  &--service-category {
+    min-height: 18rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    background: linear-gradient(180deg, rgba($color-white, 0.055), rgba($color-white, 0.035));
+
+    @include desktop {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    &:hover {
+      transform: translateY(-0.25rem);
+      border-color: rgba($color-blue-light, 0.28);
+
+      box-shadow:
+        0 1.25rem 3.125rem rgba(0, 0, 0, 0.28),
+        0 0 1.5rem rgba($color-blue, 0.08);
+
+      .card--service-category__image::before {
+        transform: scale(1.06);
+        opacity: 1;
+        filter: brightness(0.95) contrast(1.08);
+      }
+
+    }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    
+    @include desktop{
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    min-height: 12rem;
+    overflow: hidden;
+
+    @include desktop {
+      min-height: 100%;
+    }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: $radius-md;
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(20, 22, 26, 0.95) 0%,
+            rgba(20, 22, 26, 0.65) 35%,
+            rgba(20, 22, 26, 0.18) 100%
+          ),
+          var(--bg-image);
+
+        background-size: cover;
+        background-position: center;
+        opacity: .82;
+
+        filter: brightness(0.78) contrast(1.05);
+
+        transition:
+          transform 0.6s ease,
+          opacity 0.35s ease,
+          filter 0.35s ease;
+      }
+    }
+  }                     
 
   &--banner {
       display: grid;
@@ -156,5 +262,34 @@
       }
     }
   }
+
+  &--light{
+  background-color: $color-white;
+  border-color: $color-border-hover;
+  
+
+    &:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 1.25rem 3.75rem rgba(15, 23, 42, 0.06);
+      border-color: $color-blue-hover;
+
+    }
+
+    i {
+      margin-bottom: 2rem;
+      color: #3b82f6;
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      }
+  }
+
  
 }

@@ -17,7 +17,7 @@
   }
 
 
-  & .btn.btn--ghost {
+  & .btn.btn--outline {
     backdrop-filter: blur(32px);
     background-color: rgba(156, 156, 159, 0.005);
     border: 0.0625rem solid rgb(39 39 39 / 12%);
@@ -40,7 +40,7 @@
 
   }
 
-  & .card{
+  & .card:not(.card--light){
     background-color: $color-black;
     color: $color-white;
 
@@ -56,7 +56,6 @@
   @include desktop{
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    align-items: end;
     gap: 80px;
     margin-bottom: 80px;
 

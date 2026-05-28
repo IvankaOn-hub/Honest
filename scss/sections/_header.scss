@@ -52,6 +52,9 @@
       color: $color-white;
       font-size: 1.125rem;
       transition: $transition;
+      &.active{
+        color: $color-blue-hover;
+      }
 
       &:hover {
         color: $color-blue-hover;

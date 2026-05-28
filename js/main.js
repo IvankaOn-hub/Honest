@@ -358,7 +358,7 @@ function initSwiperSliders() {
           spaceBetween: 20,
         },
       },
-    },
+    }
   };
 
   function initSliders() {

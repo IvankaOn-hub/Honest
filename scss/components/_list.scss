@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.list{
+  display: grid;
+  gap: .2rem;
+
+  li {
+    color: $color-white;
+    font-size: 1rem;
+    opacity: .8;
+  }
+  i {
+    margin-right: .625rem;
+    color: $color-blue-light;
+  }
+
+  a {
+    color: $color-white;
+    &:hover{
+        color: $color-blue-hover;
+    }
+  }
+}

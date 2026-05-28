@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HonestCar</title>
+    <title>HonestCar - Services Category</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -82,7 +82,7 @@
 
         <div class="header__mobile">
           <nav class="header__nav">
-            <a href="services-category.html">Usługi</a>
+            <a href="#services" class="active">Usługi</a>
             <a href="#price">Oferty</a>
             <a href="#about">O nas</a>
             <a href="#">Oferty specjalne</a>
@@ -108,299 +108,280 @@
     </header>
 
     <main>
-      <!-- 03. Hero Banner -->
-      <section class="hero">
-        <!-- VIDEO -->
-        <video class="hero__video" autoplay muted loop playsinline>
-           <source
-            src="./videos/hero.mov"
-            media="(max-width: 1024px)"
-            type="video/mp4"
-          />
-          <source
-            src="./videos/hero-video.mp4"
-            type="video/mp4"
-          />
-        </video>
 
-        <!-- DARK OVERLAY -->
-        <div class="hero__overlay"></div>
-
-        <!-- CONTENT -->
-        <div class="hero__wrapper">
-          <div class="hero__content">
-            <h1>Serwis samochodowy, któremu możesz zaufać</h1>
-            <p>
-              Dbamy o Twój samochód kompleksowo - od diagnostyki po profesjonalne naprawy i regularny serwis. Terminowo, uczciwie i bez
-              zbędnych problemów.
-            </p>
-          </div>
-          <div>
-            <div class="hero__highlights">
-              <div class="hero__highlight">
-                <span class="hero__highlight-number">150+</span>
-                <p>Zadowoleni klienci</p>
-              </div>
-
-              <div class="hero__highlight">
-                <span class="hero__highlight-number">10+</span>
-                <p>Lat doświadczenia</p>
-              </div>
-
-              <div class="hero__highlight">
-                <span class="hero__highlight-number">24/7</span>
-                <p>Pomoc drogowa</p>
-              </div>
+        <!-- 04. Service Hero -->
+        <section class="services-hero">
+            <div class="services-hero__bg" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            <div class="container">
+                <!-- 03. BreadCrumbs -->
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Strona główna</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="services-category.html" class="breadcrumbs__link">Usługi</a>
+                        </li>
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__current">Diagnostyka</span>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="services-hero__wrapper">
+                    <div class="services-hero__wrapper--desc">
+                        <span class="eyebrow">Usługa</span>
+                        <h1 class="section-title">Diagnostyka samochodowa</h1>
+                        <p>
+                            Kompleksowa diagnostyka komputerowa i techniczna auta. Sprawdzamy błędy,
+                            parametry pracy podzespołów oraz rzeczywisty stan samochodu przed naprawą,
+                            zakupem lub dalszą eksploatacją.
+                        </p>
+                        <div class="services-hero__actions">
+                            <a href="#" class="btn btn--primary js-open-booking" type="button">
+                                Konsultacja
+                            </a>
+                            <a href="#" class="btn btn--outline js-open-booking">Umów wizytę</a>
+                        </div>
+                    </div>
+                    <div class="services-hero__card card">
+                        <span class="eyebrow">Szybka konsultacja</span>
+                        <h5>Masz problemy z autem?</h5>
+                        <ul class="list">
+                            <li><i class="fa-regular fa-circle-check"></i>Świeci kontrolka check engine</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Auto traci moc podczas jazdy</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Pojawiają się błędy elektroniki</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Silnik pracuje nierówno</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="hero__actions">
-              <a href="#" class="btn btn--primary js-open-booking" type="button">
-                Umów wizytę
-              </a>
-              <a href="#services" class="btn btn--outline">Poznaj usługi</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- 08. Reviews -->
-      <section class="reviews js-white-bg" id="reviews">
+    <!-- 05. Service Info -->
+     <section class="white-section">
         <div class="container split-layout split-layout--media-right">
-          <div class="reviews__content split-layout__content">
-            <span class="eyebrow">Opinie</span>
-
-            <h2 class="title-h2">Co mówią nasi klienci</h2>
-
-            <p class="reviews__text">Prawdziwe opinie kierowców, którzy powierzają nam swoje samochody.</p>
-
-            <div class="reviews__rating">
-              <span>4.9</span>
-              <p>★★★★★</p>
+            <div class="split-layout__content">
+                <span class="eyebrow">Dlaczego warto</span>
+                <h2 class="title-h2">Dlaczego warto wykonać diagnostykę samochodową?</h2>
+                <p>Regularna diagnostyka pozwala szybko wykryć usterki, uniknąć kosztownych
+                napraw i utrzymać auto w pełnej sprawności. Sprawdzamy parametry pracy
+                podzespołów, błędy elektroniki oraz rzeczywisty stan techniczny pojazdu.</p>
             </div>
+            <div class="grid grid--2">
+                 <article class="card card--light">
+                    <i class="fa-solid fa-shield-halved"></i>
 
-            <p class="reviews__source">Na podstawie ponad 200 opinii w Google Maps</p>
+                    <h4>Wczesne wykrywanie usterek</h3>
 
-            <a href="#" class="btn btn--outline">Zobacz nas na Mapach Google</a>
-          </div>
+                    <p>
+                    Diagnostyka pozwala wykryć problemy zanim doprowadzą do poważnej awarii
+                    lub kosztownej naprawy silnika i elektroniki.
+                    </p>
+                </article>
 
-          <div class="reviews-slider split-layout__media tablet-slider swiper js-tablet-slider" data-slider="reviews">
-            <div class="grid grid--2 reviews-grid swiper-wrapper">
-              <article class="card review-card swiper-slide">
-                <div class="review-card__stars">★★★★★</div>
+                <article class="card card--light">
+                    <i class="fa-regular fa-clock"></i>
 
-                <p>Professional, fair prices and very good contact. The car was ready on time and everything was explained in detail.</p>
+                    <h4>Oszczędność czasu i pieniędzy</h3>
 
-                <div class="review-card__footer">
-                  <span>Artur</span>
-                  <span>2 weeks ago</span>
-                </div>
-              </article>
+                    <p>
+                    Szybka analiza błędów i parametrów auta pozwala uniknąć wymiany sprawnych
+                    części i skraca czas naprawy.
+                    </p>
+                </article>
 
-              <article class="card review-card swiper-slide">
-                <div class="review-card__stars">★★★★★</div>
+                <article class="card card--light">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
 
-                <p>Honest and reliable. They diagnosed the problem quickly and fixed it the same day.</p>
+                    <h4>Dokładna analiza pojazdu</h3>
 
-                <div class="review-card__footer">
-                  <span>Artur</span>
-                  <span>1 month ago</span>
-                </div>
-              </article>
+                    <p>
+                    Sprawdzamy elektronikę, silnik, czujniki oraz parametry pracy układów,
+                    aby precyzyjnie określić źródło problemu.
+                    </p>
+                </article>
 
-              <article class="card review-card swiper-slide">
-                <div class="review-card__stars">★★★★★</div>
+                <article class="card card--light">
+                    <i class="fa-regular fa-star"></i>
 
-                <p>Great experience. Transparent pricing, no hidden costs and a very professional team.</p>
+                    <h4>Większe bezpieczeństwo jazdy</h3>
 
-                <div class="review-card__footer">
-                  <span>Artur</span>
-                  <span>1 month ago</span>
-                </div>
-              </article>
-
-              <article class="card review-card swiper-slide">
-                <div class="review-card__stars">★★★★★</div>
-
-                <p>I’ve been coming here for years. Always top quality and a friendly atmosphere.</p>
-
-                <div class="review-card__footer">
-                  <span>Artur</span>
-                  <span>2 months ago</span>
-                </div>
-              </article>
+                    <p>
+                    Regularna kontrola techniczna zwiększa niezawodność auta i pomaga uniknąć
+                    niespodziewanych usterek podczas jazdy.
+                    </p>
+                </article>
             </div>
-
-            <div class="reviews-slider__pagination swiper-pagination"></div>
-          </div>
         </div>
-      </section>
+     </section>
 
-      <!-- 04. Services -->
-      <section class="services js-white-bg">
-        <div class="container">
+    <!-- 06. All Services -->
+    <section>
+      <div class="container">
           <div class="head-section">
             <div>
-              <span class="eyebrow">Nasze usługi</span>
-              <h2 class="title-h2">Precyzyjna pielęgnacja Twojego samochodu</h2>
+              <span class="eyebrow">Usługi w kategorii</span>
+              <h2 class="title-h2">Co możemy sprawdzić?</h2>
             </div>
             <div>
-              <p>Od diagnostyki po skomplikowane naprawy - zapewniamy jakość na poziomie dealerskim z indywidualnym podejściem.</p>
-              <a href="services-category.html" class="btn btn--primary">Wszystkie Usługi</a>
+              <p>Kompleksowa diagnostyka samochodowa - od odczytu błędów po szczegółową analizę elektroniki, silnika i stanu technicznego pojazdu.</p>
+              <a href="#" class="btn btn--primary js-open-booking">Umów wizytę</a>
             </div>
           </div>
-          <div class="grid grid--3">
-            <a
-              href="./services/diagnostics.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Diagnostyka</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
+           <div class="grid grid--2">
+
+            <article class="card card--service-category">
+              <div class="card--service-category__content">
+                  <span class="card__number">01</span>
+                    <h3>Diagnostyka komputerowa</h3>
+                    <p>
+                      Odczyt błędów sterowników i analiza parametrów pracy pojazdu przy
+                      użyciu profesjonalnego sprzętu diagnostycznego.
+                    </p>
+                    <div class="card__actions">
+                      <a href="services-single.html" class="btn btn--outline">
+                        Więcej
+                      </a>
                 </div>
               </div>
-            </a>
-
-            <a
-              href="./services/engine-repair.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/naprawa-silnika.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Naprawa silnika</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
+              <div class="card--service-category__image" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            </article>
+            <article class="card card--service-category">
+              <div class="card--service-category__content">
+                  <span class="card__number">02</span>
+                    <h3>Kasowanie błędów</h3>
+                    <p>
+                      Usuwanie zapisanych błędów po diagnostyce oraz kontrola poprawności
+                      działania systemów po naprawie.
+                    </p>
+                    <div class="card__actions">
+                      <a href="services-single.html" class="btn btn--outline">
+                        Więcej
+                      </a>
                 </div>
               </div>
-            </a>
-
-            <a
-              href="./services/suspension-repair.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/naprawa-zawieszenia.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Naprawa zawieszenia</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
+              <div class="card--service-category__image" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            </article>
+            <article class="card card--service-category">
+              <div class="card--service-category__content">
+                  <span class="card__number">03</span>
+                    <h3>Diagnostyka silnika</h3>
+                    <p>
+                      Sprawdzamy parametry pracy silnika, układ zapłonowy, paliwowy oraz
+                możliwe przyczyny spadku mocy lub nierównej pracy.
+                    </p>
+                    <div class="card__actions">
+                      <a href="services-single.html" class="btn btn--outline">
+                        Więcej
+                      </a>
                 </div>
               </div>
-            </a>
-
-            <a
-              href="./services/brake-system.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/uklad-hamulcowy.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Układ hamulcowy</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
+              <div class="card--service-category__image" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            </article>
+            <article class="card card--service-category">
+              <div class="card--service-category__content">
+                  <span class="card__number">04</span>
+                    <h3>Diagnostyka elektroniki</h3>
+                    <p>
+                      Kontrola modułów elektronicznych, czujników, instalacji oraz systemów
+                odpowiedzialnych za bezpieczeństwo i komfort jazdy.
+                    </p>
+                    <div class="card__actions">
+                      <a href="services-single.html" class="btn btn--outline">
+                        Więcej
+                      </a>
                 </div>
               </div>
-            </a>
-
-            <a
-              href="./services/drivetrain-repair.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/naprawa-ukladu-napedowego.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Naprawa układu napędowego</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
+              <div class="card--service-category__image" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            </article>
+            <article class="card card--service-category">
+              <div class="card--service-category__content">
+                  <span class="card__number">05</span>
+                    <h3>Diagnostyka przed zakupem</h3>
+                    <p>
+                      Kompleksowe sprawdzenie auta przed zakupem - stan techniczny,
+                elektronika, błędy systemowe oraz podstawowe podzespoły.
+                    </p>
+                    <div class="card__actions">
+                      <a href="services-single.html" class="btn btn--outline">
+                        Więcej
+                      </a>
                 </div>
               </div>
-            </a>
+              <div class="card--service-category__image" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            </article>
 
-            <a
-              href="./services/additional-services.html"
-              class="card card--service"
-              style="--bg-image: url(&quot;../images/services/blacharstwo-i-lakiernictwo.jpg&quot;)"
-            >
-              <div class="card--service__content">
-                <h3>Blacharstwo i lakiernictwo</h3>
-                <div class="icon-round">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="card card--banner card--banner__benefits">
-            <div class="card--banner__benefit">
-              <div class="card--banner__benefit-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <div>
-                <h4>Oryginalne części i gwarancja</h4>
-                <p>Stosujemy wyłącznie sprawdzone komponenty OEM z gwarancją na części oraz wykonane prace serwisowe</p>
-              </div>
-            </div>
+          </div>          
+      </div>
+    </section>
 
-            <div class="card--banner__benefit">
-              <div class="card--banner__benefit-icon">
-                <i class="fa-solid fa-user-gear"></i>
-              </div>
-              <div>
-                <h4>Naprawy na tysiące kilometrów</h4>
-                <p>Dbamy nie tylko o szybki efekt, ale o trwałość i bezpieczeństwo eksploatacji pojazdu.</p>
-              </div>
-            </div>
-
-            <div class="card--banner__benefit">
-              <div class="card--banner__benefit-icon">
-                <i class="fa-regular fa-clock"></i>
-              </div>
-              <div>
-                <h4>Uczciwe podejście do klienta</h4>
-                <p>Transparentna diagnostyka, jasna wycena i pełna kontrola nad zakresem wykonywanych prac</p>
-              </div>
-            </div>
-
-            <button class="btn btn--primary js-open-booking" type="button">Umów wizytę</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- 05. Before / After -->
-      <section class="before-after white-section" id="before-after">
-        <div class="container">
-          <div class="split-layout split-layout--media-right">
+    <!-- 07. Prices -->
+    <section class="price white-section">
+      <div class="container split-layout split-layout--equal split-layout--reverse">
             <div class="split-layout__content">
-              <span class="eyebrow">Przed / Po</span>
+                <span class="eyebrow">Cennik</span>
+                <h2 class="title-h2">Przejrzyste ceny bez niespodzianek</h2>
+                <p>Finalna cena zależy od modelu auta, zakresu prac i wybranych części. Po diagnostyce zawsze przedstawiamy wycenę przed rozpoczęciem naprawy.</p>
+                <a href="#" class="btn btn--outline js-open-booking">Umów wizytę</a>
+              </div>
+            <div class="split-layout__media">
+              <div class="price-table">
+                    <ul class="price-table__list">
+                      <li class="price-table__head">
+                        <span>Nazwa usługi</span>
+                        <span>Cena</span>
+                      </li>
 
-              <h2 class="title-h2">Prawdziwe transformacje. Profesjonalne rezultaty.</h2>
+                      <li class="price-table__row">
+                        <span>Diagnostyka komputerowa</span>
+                        <strong>od 150 zł</strong>
+                      </li>
 
-              <p class="before-after__text">
-                Od zużytych detali po fabryczne wykończenie - każdy samochód otrzymuje uwagę, na jaką zasługuje.
-              </p>
+                      <li class="price-table__row">
+                        <span>Kasowanie błędów</span>
+                        <strong>od 80 zł</strong>
+                      </li>
 
-              <a href="" class="btn btn--outline">Portfolio</a>
+                      <li class="price-table__row">
+                        <span>Diagnostyka silnika</span>
+                        <strong>od 200 zł</strong>
+                      </li>
+
+                      <li class="price-table__row">
+                        <span>Diagnostyka elektroniki</span>
+                        <strong>od 250 zł</strong>
+                      </li>
+
+                      <li class="price-table__row">
+                        <span>Diagnostyka przed zakupem</span>
+                        <strong>od 350 zł</strong>
+                      </li>
+
+                      <li class="price-table__row">
+                        <span>Kontrola kontrolek i czujników</span>
+                        <strong>od 120 zł</strong>
+                      </li>
+
+                    </ul>
+                  </div>
             </div>
+        </div>
+    </section>
 
-            <div class="split-layout__media comparison">
-              <img
-                class="comparison__image comparison__image--after"
-                src="./images/before-after/headlight-restoration-after.jpg"
-                alt="After"
-              />
-
-              <img
-                class="comparison__image comparison__image--before"
-                src="./images/before-after/headlight-restoration-before.jpg"
-                alt="Before"
-              />
-
-              <div class="comparison__line"></div>
-
-              <button class="comparison__handle" type="button" aria-label="Drag comparison">‹ ›</button>
-
-              <span class="comparison__label comparison__label--before">Przed</span>
-              <span class="comparison__label comparison__label--after">Po</span>
-            </div>
+    <!-- 08. Before/After -->
+    <section class="before-after" id="before-after">
+      <div class="container">
+        <!-- <div class="head-section">
+          <div>
+            <span class="eyebrow">Usługi w kategorii</span>
+            <h2 class="title-h2">Co możemy sprawdzić?</h2>
           </div>
-
-          <div class="before-after__projects card">
+          <div>
+            <p>Kompleksowa diagnostyka samochodowa - od odczytu błędów po szczegółową analizę elektroniki, silnika i stanu technicznego pojazdu.</p>
+            <a href="#" class="btn btn--primary js-open-booking">Umów wizytę</a>
+          </div>
+        </div> -->
+        <div class="before-after__projects card">
             <div class="before-after__projects-head">
               <span class="eyebrow">Więcej transformacji</span>
               <h3>Każdy samochód ma swoją historię.</h3>
@@ -463,134 +444,12 @@
 
               <h4>Czyszczenie komory silnika</h4>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 06. About Company -->
-      <section class="about" id="about">
-        <div class="container split-layout split-layout--equal split-layout--reverse">
-          <div class="split-layout__content">
-            <span class="eyebrow">O nas</span>
-            <h2 class="title-h2">Serwis samochodowy klasy premium z uczciwym podejściem.</h2>
-              <p>
-                Tworzymy usługę, w której klient otrzymuje nie tylko naprawę, ale także przejrzyste, komfortowe i wysokiej jakości usługi
-                związane z konserwacją samochodu.
-              </p>
-              <p>
-                Nasz zespół pracuje z dbałością o szczegóły, korzysta z nowoczesnego sprzętu i wyjaśnia każdy etap pracy przed
-                przystąpieniem do dalszych działań.
-              </p>
-            <a href="/about-us" class="btn btn--outline">Przeczytaj więcej</a>
-          </div>
-          <div class="split-layout__media">
-            <img class="border-rounded" src="./images/about/german-cars-specialization.jpg" alt="Honest Car Service" />
-          </div>
-        </div>
-      </section>
-
-      <!-- 07. CTA BANNER -->
-      <section class="cta-banner js-white-bg">
-        <div class="cta-banner__inner">
-          <div class="cta-banner__content">
-            <span class="eyebrow">Zarezerwuj usługę</span>
-
-            <h2 class="title-h2">Twój samochód zasługuje na najlepszą opiekę.</h2>
-
-            <p class="cta-banner__text">Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach.</p>
-
-            <button href="#contact" class="btn btn--primary js-open-booking">Zarezerwuj wizytę</button>
-          </div>
-        </div>
-        <div class="cta-banner__image"></div>
-      </section>
-
-      <!-- 09. Car Brands -->
-      <section class="brands white-section" id="brands">
-        <div class="container split-layout split-layout--media-left split-layout split-layout--reverse">
-          <div class="split-layout__content">
-            <span class="eyebrow">Marki, które obsługujemy</span>
-            <h2 class="title-h2">Współpracujemy ze wszystkimi głównymi markami</h2>
-            <p>Nasi specjaliści mają doświadczenie w pracy z szeroką gamą marek i modeli.</p>
-          </div>
-          <div class="split-layout__media brands-slider always-slider" data-slider="brands">
-            <div class="brands__grid swiper-wrapper">
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/bmw.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/mercedes-benz.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/toyota.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/lexus.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/volkswagen.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/audi.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/mini-car.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/porsche.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/volvo.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/land-rover.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/skoda.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/ford.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/kia.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/jeep.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/nissan.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/mitsubishi.png" alt="Logo Brands" />
-              </div>
-
-              <div class="brand-card swiper-slide">
-                <img src="./images/brands/suzuki.png" alt="Logo Brands" />
-              </div>
-            </div>
-
-            <div class="brands-slider__pagination swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 11. Service Process -->
-      <section class="process" id="process" data-step="form">
+    <!-- 09. Process -->
+    <section class="process" id="process" data-step="form">
         <div class="process__inner">
           <div class="head-section">
             <div>
@@ -677,10 +536,82 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 12. FAQ -->
-      <section class="faq js-white-bg" id="faq">
+    <!-- 10. Reviews -->
+    <section class="reviews js-white-bg" id="reviews">
+        <div class="container split-layout split-layout--media-right">
+          <div class="reviews__content split-layout__content">
+            <span class="eyebrow">Opinie</span>
+
+            <h2 class="title-h2">Co mówią nasi klienci</h2>
+
+            <p class="reviews__text">Prawdziwe opinie kierowców, którzy powierzają nam swoje samochody.</p>
+
+            <div class="reviews__rating">
+              <span>4.9</span>
+              <p>★★★★★</p>
+            </div>
+
+            <p class="reviews__source">Na podstawie ponad 200 opinii w Google Maps</p>
+
+            <a href="#" class="btn btn--outline">Zobacz nas na Mapach Google</a>
+          </div>
+
+          <div class="reviews-slider split-layout__media tablet-slider swiper js-tablet-slider" data-slider="reviews">
+            <div class="grid grid--2 reviews-grid swiper-wrapper">
+              <article class="card review-card swiper-slide">
+                <div class="review-card__stars">★★★★★</div>
+
+                <p>Professional, fair prices and very good contact. The car was ready on time and everything was explained in detail.</p>
+
+                <div class="review-card__footer">
+                  <span>Artur</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </article>
+
+              <article class="card review-card swiper-slide">
+                <div class="review-card__stars">★★★★★</div>
+
+                <p>Honest and reliable. They diagnosed the problem quickly and fixed it the same day.</p>
+
+                <div class="review-card__footer">
+                  <span>Artur</span>
+                  <span>1 month ago</span>
+                </div>
+              </article>
+
+              <article class="card review-card swiper-slide">
+                <div class="review-card__stars">★★★★★</div>
+
+                <p>Great experience. Transparent pricing, no hidden costs and a very professional team.</p>
+
+                <div class="review-card__footer">
+                  <span>Artur</span>
+                  <span>1 month ago</span>
+                </div>
+              </article>
+
+              <article class="card review-card swiper-slide">
+                <div class="review-card__stars">★★★★★</div>
+
+                <p>I’ve been coming here for years. Always top quality and a friendly atmosphere.</p>
+
+                <div class="review-card__footer">
+                  <span>Artur</span>
+                  <span>2 months ago</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="reviews-slider__pagination swiper-pagination"></div>
+          </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="faq js-white-bg" id="faq">
         <div class="container split-layout split-layout--media-right">
           <div class="split-layout__content">
             <span class="eyebrow">FAQ</span>
@@ -738,10 +669,10 @@
             </details>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 13. SEO Text -->
-      <section class="section seo-block" id="seo">
+    <!-- 12. SEO DESC -->
+    <section class="section seo-block" id="seo">
         <div class="seo-block__inner">
           <div class="seo-block__card">
             <div class="seo-block__content">
@@ -776,10 +707,10 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 14. Blog -->
-      <section class="blog-preview section-head" id="blog">
+    <!-- 13. Blog -->
+    <section class="blog-preview section-head" id="blog">
         <div class="container split-layout split-layout--media-left split-layout--reverse">
           <div class="split-layout__content">
             <span class="eyebrow">Blog</span>
@@ -850,65 +781,11 @@
             <div class="blog-slider__pagination swiper-pagination"></div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 16. Contact -->
-      <section class="contact section-head white-section" id="contact">
-        <div class="contact__inner">
-          <div class="grid grid--2">
-            <div class="contact__content card">
-              <span class="eyebrow">Kontakt</span>
-              <h2 class="title-h2">Umów wizytę lub skontaktuj się z nami</h2>
-
-              <div class="contact__list">
-                <a href="tel:+48504367207" class="contact__item">
-                  <span>Telefon</span>
-                  <strong>+48 504 367 207</strong>
-                </a>
-
-                <a href="mailto:kontakt@honestcar.pl" class="contact__item">
-                  <span>E-mail</span>
-                  <strong>kontakt@honestcar.pl</strong>
-                </a>
-
-                <div class="contact__item">
-                  <span>Adres</span>
-                  <strong>Hetmańska 47A, 04-305 Warszawa</strong>
-                </div>
-
-                <div class="contact__item">
-                  <span>Godziny pracy</span>
-                  <strong>Pon–Pt: 9:00–18:00</strong>
-                </div>
-              </div>
-
-              <div class="contact__socials">
-                <a href="#" class="icon-round" aria-label="Telegram">
-                  <i class="fa-brands fa-telegram icon-md"></i>
-                </a>
-                <a href="#" class="icon-round" aria-label="Whatsapp">
-                  <i class="fa-brands fa-whatsapp icon-md"></i>
-                </a>
-                <a href="#" class="icon-round" aria-label="Instagram">
-                  <i class="fa-brands fa-instagram icon-md"></i>
-                </a>
-              </div>
-
-              <a href="tel:+48504367207" class="btn btn--primary">Zadzwoń teraz</a>
-            </div>
-            <div class="contact__map">
-              <iframe
-                src="https://www.google.com/maps?q=Hetma%C5%84ska%2047A%2C%2004-305%20Warszawa&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- 17. Footer / Contact -->
+    <!-- 14. Footer / Contact -->
     <footer class="footer" id="contact">
       <div class="container">
         <div class="footer__top">
@@ -1052,7 +929,7 @@
 
         <form class="floating-booking__form">
           <div class="floating-booking__compact">
-            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Twój email" required />
+            <input class="floating-booking__email js-open-booking" type="email" placeholder="Twój email" required />
             <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
           </div>
 

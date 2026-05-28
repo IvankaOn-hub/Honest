@@ -15,6 +15,9 @@
 @use "./components/sticky-callback";
 @use "./components/split-layout";
 @use "./components/scroll-top";
+@use "./components/breadcrumb";
+@use "./components/list";
+@use "./components/tablet";
 
 @use "./sections/topbar";
 @use "./sections/header";
@@ -31,3 +34,4 @@
 @use "./sections/contact";
 @use "./sections/slider";
 @use "./sections/trust";
+@use "./sections/services-hero";

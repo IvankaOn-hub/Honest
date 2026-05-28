@@ -1,0 +1,72 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.price-table {
+
+  &__list {
+    overflow: hidden;
+    border: 0.0625rem solid rgba($color-black, 0.08);
+    border-radius: $radius-md;
+    background: $color-white;
+  }
+
+  &__head,
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  &__head {
+    background: rgba($color-blue, 0.08);
+    border-bottom: 0.0625rem solid rgba($color-black, 0.06);
+    padding: 1.5rem 2rem;
+
+    span {
+      color: $color-black;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__row {
+    border-bottom: 0.0625rem solid rgba($color-black, 0.06);
+    transition:
+      background 0.3s ease,
+      padding 0.3s ease;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background: rgba($color-blue, 0.025);
+
+      strong {
+        background: rgba($color-blue, 0.12);
+      }
+    }
+
+    span {
+      color: $color-black;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    strong {
+      flex-shrink: 0;
+      padding: .625rem;
+      border-radius: $radius-md;
+      background: rgba($color-blue, 0.08);
+      color: $color-blue;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+  }
+}

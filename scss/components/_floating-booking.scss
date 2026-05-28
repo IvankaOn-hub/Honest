@@ -2,12 +2,24 @@
 @use "../abstracts/mixins" as *;
 
 .floating-booking {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+  min-height: 82px;
+  background: linear-gradient(90deg, rgb(8 8 8), rgb(8 8 8), rgb(8 8 8 / 46%));
+  border-top: 1px solid rgba($color-white, 0.1);
+  backdrop-filter: blur(22px);
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
   transition:
     transform 0.35s ease,
-    opacity 0.35s ease;
+    opacity 0.35s ease,
+    min-height 0.45s ease,
+    background 0.45s ease,
+    backdrop-filter 0.45s ease;
 
   &.is-scroll-hidden {
     transform: translateY(120%);
@@ -26,22 +38,6 @@
     opacity: 1;
     pointer-events: auto;
   }
-}
-
-.floating-booking {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 12;
-  min-height: 82px;
-  background: linear-gradient(90deg, rgb(8 8 8), rgb(8 8 8), rgb(8 8 8 / 46%));
-  border-top: 1px solid rgba($color-white, 0.1);
-  backdrop-filter: blur(22px);
-  transition:
-    min-height 0.45s ease,
-    background 0.45s ease,
-    backdrop-filter 0.45s ease;
 
   &__inner {
     @include container;
@@ -181,7 +177,7 @@
       align-items: center;
       gap: $gap-sm;
       margin-right: 22px;
-      color: $color-light;
+      color: $color-white;
       font-size: .875rem;
       cursor: pointer;
     }

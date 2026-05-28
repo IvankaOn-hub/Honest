@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 body {
-  background: $color-navy;
+  background: $color-black;
   @include body-text;
 }
 
