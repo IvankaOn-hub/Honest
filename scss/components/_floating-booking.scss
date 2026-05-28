@@ -2,6 +2,33 @@
 @use "../abstracts/mixins" as *;
 
 .floating-booking {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+
+  &.is-scroll-hidden {
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden {
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-expanded {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.floating-booking {
   position: fixed;
   left: 0;
   right: 0;

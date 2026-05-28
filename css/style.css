@@ -373,6 +373,28 @@ h5 {
   }
 }
 .floating-booking {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.floating-booking.is-scroll-hidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+.floating-booking.is-hidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+.floating-booking.is-expanded {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.floating-booking {
   position: fixed;
   left: 0;
   right: 0;
@@ -584,6 +606,7 @@ textarea {
   position: relative !important;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
   border: 1px solid rgba(245, 245, 244, 0.08);

@@ -5,6 +5,7 @@
   position: relative !important;
   border-radius: $radius-md;
   background: $color-glass;
+  border: 1px solid $color-border;
   overflow: hidden;
   transition:
     transform $transition,
