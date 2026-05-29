@@ -73,7 +73,19 @@
         max-width: 28rem;
         box-shadow: 0 1.25rem 5rem rgba(0,0,0,.35);
         min-width: 17rem;
-        padding: 1rem !important;   
+        padding: 1rem !important;  
+        position: relative;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(66, 134, 213, 0.52), rgba(245, 245, 244, 0.06));
+        } 
 
         & .eyebrow{
             margin-bottom: 0;

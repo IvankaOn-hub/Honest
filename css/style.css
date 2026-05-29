@@ -2549,14 +2549,9 @@ textarea {
   backdrop-filter: blur(8px);
   border-radius: 8px;
   border: 1px solid rgba(245, 245, 244, 0.06);
-  padding: 0;
+  padding: 0 !important;
   background: linear-gradient(180deg, rgba(245, 245, 244, 0.026), rgba(245, 245, 244, 0.012));
   overflow: hidden;
-}
-@media (min-width: 64rem) {
-  .faq__accordion {
-    padding: 1rem;
-  }
 }
 
 .faq-item {
@@ -3170,6 +3165,16 @@ textarea {
   box-shadow: 0 1.25rem 5rem rgba(0, 0, 0, 0.35);
   min-width: 17rem;
   padding: 1rem !important;
+  position: relative;
+}
+.services-hero__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(66, 134, 213, 0.52), rgba(245, 245, 244, 0.06));
 }
 .services-hero__card .eyebrow {
   margin-bottom: 0;
