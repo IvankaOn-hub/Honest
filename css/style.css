@@ -616,7 +616,7 @@ textarea {
   border-color: rgba(127, 151, 199, 0.24);
 }
 .card:hover .card__number {
-  color: rgba(127, 151, 199, 0.9);
+  color: #aacefa;
 }
 .card__number {
   margin-bottom: 2rem;
@@ -3109,7 +3109,7 @@ textarea {
 }
  */
 .services-hero {
-  min-height: calc(95vh - 126px);
+  min-height: calc(90vh - 126px);
   position: relative;
   overflow: hidden;
   background: #0f0f11;
