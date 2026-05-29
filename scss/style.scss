@@ -18,6 +18,7 @@
 @use "./components/breadcrumb";
 @use "./components/list";
 @use "./components/table";
+/* @use "./components/gallery"; */
 
 @use "./sections/topbar";
 @use "./sections/header";
@@ -34,4 +35,4 @@
 @use "./sections/contact";
 @use "./sections/slider";
 @use "./sections/trust";
-@use "./sections/services-hero";
+@use "./sections/pages-hero";

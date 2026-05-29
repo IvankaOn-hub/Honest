@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HonestCar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css?v=0001" />
+  </head>
+
+  <body>
+    <!-- 01. Top Bar -->
+    <div class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__contacts">
+          <a class="topbar__link" href="tel:504367207">
+            <i class="fa-solid fa-phone icon-sm"></i>
+            <span>504 367 207</span>
+          </a>
+          <a class="topbar__link" href="https://maps.app.goo.gl/PU27N4JTdbqkwk2H9" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot icon-sm"></i>
+            <span>Hetmańska 47A, 04-305 Warszawa</span>
+          </a>
+        </div>
+        <div class="topbar__actions">
+          <div class="topbar__socials">
+            <a href="#" aria-label="Telegram">
+              <i class="fa-brands fa-telegram icon-md"></i>
+            </a>
+            <a href="#" aria-label="Whatsapp">
+              <i class="fa-brands fa-whatsapp icon-md"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram icon-md"></i>
+            </a>
+          </div>
+          <div class="lang-switcher">
+            <button class="lang-switcher__current" type="button">PL</button>
+            <div class="lang-switcher__dropdown">
+              <a href="#" class="is-active">PL</a>
+              <a href="#">RU</a>
+              <a href="#">UA</a>
+            </div>
+          </div>
+          <button class="btn btn--outline topbar__booking js-open-booking" type="button">Umów wizytę</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02. Header / Navigation -->
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="index.html" class="header__logo">
+          <img src="images/logo.png" alt="Logo" />
+        </a>
+
+        <div class="header__actions">
+          
+          <a class="" href="tel:504367207">
+            <i class="fa-solid fa-phone icon-md"></i>
+          </a>
+          <div class="lang-switcher">
+            <button class="lang-switcher__current" type="button">PL</button>
+
+            <div class="lang-switcher__dropdown">
+              <a href="#" class="is-active">PL</a>
+              <a href="#">RU</a>
+              <a href="#">UA</a>
+            </div>
+          </div>
+        </div>
+        <button class="header__burger" type="button" aria-label="Otwórz menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="header__mobile">
+          <nav class="header__nav">
+            <a href="services-category.html">Usługi</a>
+            <a href="#price">Oferty</a>
+            <a href="about-us.html">O nas</a>
+            <a href="#">Oferty specjalne</a>
+            <a href="#faq">Portfolio</a>
+            <a href="#contact">Kontakt</a>
+          </nav>
+
+          <div class="header__mobile-social">
+            <a href="#" class="icon-round" aria-label="Telegram">
+              <i class="fa-brands fa-telegram icon-md"></i>
+            </a>
+            <a href="#" class="icon-round" aria-label="Whatsapp">
+              <i class="fa-brands fa-whatsapp icon-md"></i>
+            </a>
+            <a href="#" class="icon-round" aria-label="Instagram">
+              <i class="fa-brands fa-instagram icon-md"></i>
+            </a>
+          </div>
+
+          <a class="btn btn--primary" href="tel:+48504367207">Laweta 24/7</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 03. Hero Banner -->
+      <section class="pages-hero">
+            <div class="pages-hero__bg" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            <div class="container">
+                <!-- 03. BreadCrumbs -->
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Strona główna</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="services-category.html" class="breadcrumbs__link">Usługi</a>
+                        </li>
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__current">Diagnostyka</span>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="pages-hero__wrapper">
+                    <div class="pages-hero__wrapper--desc">
+                        <span class="eyebrow">Usługa</span>
+                        <h1 class="section-title">Diagnostyka samochodowa</h1>
+                        <p>
+                            Kompleksowa diagnostyka komputerowa i techniczna auta. Sprawdzamy błędy,
+                            parametry pracy podzespołów oraz rzeczywisty stan samochodu przed naprawą,
+                            zakupem lub dalszą eksploatacją.
+                        </p>
+                        <div class="pages-hero__actions">
+                            <button class="btn btn--primary js-open-booking" type="button">
+                                Konsultacja
+                            </button>
+                            <button class="btn btn--outline js-open-booking" type="button">Umów wizytę</button>
+                        </div>
+                    </div>
+                    <div class="pages-hero__card">
+                        <span class="eyebrow">Szybka konsultacja</span>
+                        <h5>Masz problemy z autem?</h5>
+                        <ul class="list">
+                            <li><i class="fa-regular fa-circle-check"></i>Świeci kontrolka check engine</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Auto traci moc podczas jazdy</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Pojawiają się błędy elektroniki</li>
+                            <li><i class="fa-regular fa-circle-check"></i>Silnik pracuje nierówno</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+      <!-- 16. Contact -->
+      <section class="contact section-head white-section" id="contact">
+        <div class="contact__inner">
+          <div class="grid grid--2">
+            <div class="contact__content card">
+              <span class="eyebrow">Kontakt</span>
+              <h2 class="title-h2">Umów wizytę lub skontaktuj się z nami</h2>
+
+              <div class="contact__list">
+                <a href="tel:+48504367207" class="contact__item">
+                  <span>Telefon</span>
+                  <strong>+48 504 367 207</strong>
+                </a>
+
+                <a href="mailto:kontakt@honestcar.pl" class="contact__item">
+                  <span>E-mail</span>
+                  <strong>kontakt@honestcar.pl</strong>
+                </a>
+
+                <div class="contact__item">
+                  <span>Adres</span>
+                  <strong>Hetmańska 47A, 04-305 Warszawa</strong>
+                </div>
+
+                <div class="contact__item">
+                  <span>Godziny pracy</span>
+                  <strong>Pon–Pt: 9:00–18:00</strong>
+                </div>
+              </div>
+
+              <div class="contact__socials">
+                <a href="#" class="icon-round" aria-label="Telegram">
+                  <i class="fa-brands fa-telegram icon-md"></i>
+                </a>
+                <a href="#" class="icon-round" aria-label="Whatsapp">
+                  <i class="fa-brands fa-whatsapp icon-md"></i>
+                </a>
+                <a href="#" class="icon-round" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram icon-md"></i>
+                </a>
+              </div>
+
+              <a href="tel:+48504367207" class="btn btn--primary">Zadzwoń teraz</a>
+            </div>
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps?q=Hetma%C5%84ska%2047A%2C%2004-305%20Warszawa&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 17. Footer / Contact -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo">
+              <img src="./images/logo.png" alt="Honest Car" />
+            </a>
+
+            <p>Profesjonalny serwis samochodowy w Warszawie. Uczciwe podejście, jakość, której możesz zaufać.</p>
+
+            <div class="footer__socials">
+              <a href="#" class="icon-round" aria-label="Telegram">
+                <i class="fa-brands fa-telegram icon-md"></i>
+              </a>
+              <a href="#" class="icon-round" aria-label="Whatsapp">
+                <i class="fa-brands fa-whatsapp icon-md"></i>
+              </a>
+              <a href="#" class="icon-round" aria-label="Instagram">
+                <i class="fa-brands fa-instagram icon-md"></i>
+              </a>
+            </div>
+
+            <button class="btn btn--primary js-open-booking" type="button">Umów wizytę</button>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <div class="footer__column footer-accordion is-open">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Nawigacja</h5>
+                <span></span>
+              </button>
+
+              <ul class="footer-accordion__content">
+                <a href="#services">Usługi</a>
+                <a href="#price">Oferty</a>
+                <a href="about-us.html">O nas</a>
+                <a href="#">Oferty specjalne</a>
+                <a href="#faq">Portfolio</a>
+              </ul>
+            </div>
+
+            <div class="footer__column footer-accordion">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Usługi</h5>
+                <span></span>
+              </button>
+
+              <ul class="footer-accordion__content">
+                <li><a href="./services/diagnostics.html">Diagnostyka</a></li>
+                <li><a href="./services/engine-repair.html">Naprawa silnika</a></li>
+                <li><a href="./services/suspension-repair.html">Naprawa zawieszenia</a></li>
+                <li><a href="./services/brake-system.html">Układ hamulcowy</a></li>
+                <li><a href="./services/drivetrain-repair.html">Naprawa układu napędowego</a></li>
+                <li><a href="./services/additional-services.html">Blacharstwo i lakiernictwo</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="footer__contact">
+            <div class="footer__column footer-accordion">
+              <button class="footer-accordion__trigger" type="button">
+                <h5>Kontakty</h5>
+                <span></span>
+              </button>
+
+              <ul class="footer-accordion__content">
+                <li>
+                  <span>Tekefon</span>
+                  <a href="tel:+48504367207">504 367 207</a>
+                </li>
+
+                <li>
+                  <span>Adres</span>
+                  <a href="https://www.google.com/maps" target="_blank" rel="noopener">Hetmańska 47A, 04-305 Warszawa</a>
+                </li>
+
+                <li>
+                  <span>E-mail</span>
+                  <a href="mailto:kontakt@honestcar.pl">kontakt@honestcar.pl</a>
+                </li>
+
+                <li>
+                  <span>Godziny</span>
+                  <p>Mon - Sat: 8:00 - 20:00</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Honest Car. All rights reserved.</p>
+
+          <div>
+            <a href="./privacy-policy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <button class="scroll-top js-scroll-top" type="button" aria-label="Scroll Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Truck -->
+    <button class="js-sticky-callback sticky-callback tooltip" type="button" aria-label="Zamów lawetę">
+    <span class="tooltip__content">
+      <strong>Zamów lawetę</strong>
+      <small>Kliknij, aby zamówić lawete</small>
+    </span>
+      <img class="sticky-callback__icon" src="images/icons/truck.png" alt="Icon Truck">
+    </button>
+
+    <!-- Callback Modal -->
+    <div class="modal" id="callbackModal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__content">
+        <button class="modal__close" type="button">×</button>
+
+        <h3 class="modal__title">Zostaw numer</h3>
+        <p class="modal__desc">Podaj imię i telefon, a skontaktujemy się z Tobą jak najszybciej.</p>
+
+        <form class="grid">
+          <input type="text" name="name" placeholder="Twoje imię" required />
+          <input type="tel" name="phone" placeholder="Numer telefonu" required />
+          <button class="btn btn--primary" type="submit">Zamów kontakt</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Booking -->
+    <div class="floating-booking is-scroll-hidden" id="bookingPanel">
+      <div class="floating-booking__inner">
+        <div class="floating-booking__intro">
+          <p>Zaplanuj wizytę</p>
+          <span>lub zadaj pytanie</span>
+        </div>
+
+        <form class="floating-booking__form">
+          <div class="floating-booking__compact">
+            <input class="floating-booking__email js-expand-booking" type="email" placeholder="Twój email" required />
+            <button class="floating-booking__close js-close-booking" type="button" aria-label="Закрити форму">×</button>
+          </div>
+
+          <div class="floating-booking__full">
+            <div class="floating-booking__head">
+              <span class="eyebrow">Szybka rezerwacja</span>
+              <h2>Umów się na wizytę lub uzyskaj ocenę usługi</h2>
+              <p>Wypełnij krótki formularz, a skontaktujemy się z Tobą w celu wyjaśnienia szczegółów.</p>
+            </div>
+
+            <div class="floating-booking__purpose">
+              <p>W jakim celu chcesz się skontaktować?</p>
+
+              <label>
+                <input type="radio" name="purpose" value="visit" checked />
+                <span>Zarezerwuj wizytę</span>
+              </label>
+
+              <label>
+                <input type="radio" name="purpose" value="question" />
+                <span>Masz pytanie</span>
+              </label>
+            </div>
+
+            <div class="floating-booking__fields">
+              <input type="text" placeholder="Twoje imię" required/>
+              <input type="tel" placeholder="Telefon" required/>
+              <input type="email" placeholder="E-mail" />
+              <textarea placeholder="Wiadomość"></textarea>
+            </div>
+
+            <div class="floating-booking__actions">
+              <button class="btn btn--primary" type="submit">Wyślij</button>
+              <button class="btn btn--outline js-collapse-booking" type="button">Wróć</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

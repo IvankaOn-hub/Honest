@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.services-hero{
+.pages-hero{
   min-height: calc(90vh - 126px);
   position: relative;
   overflow: hidden;
@@ -30,12 +30,13 @@
         var(--bg-image);
         background-size: cover;
         background-position: center;
-        opacity: 0.65;
+        opacity: 0.2;
         z-index: 0;
 
         @include desktop{
             inset: 0 0 0 52%;
             clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 0.65;
         }
     }
 

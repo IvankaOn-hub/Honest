@@ -7,6 +7,7 @@
   background: $color-glass;
   border: 1px solid $color-border;
   overflow: hidden;
+  height: fit-content;
   transition:
     transform $transition,
     border-color $transition,
@@ -45,6 +46,10 @@
   
   & h3{
     margin-bottom: 1rem;
+  }
+
+  p{
+    line-height: 1.5;
   }
 
   &--service {
@@ -291,9 +296,22 @@
 
     p {
       font-size: 1rem;
-      line-height: 1.8;
-      }
+    }
   }
 
- 
+  &--image{
+    min-height: 15rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: var(--bg-image);
+      background-size: cover;
+      background-position: center;
+      inset: 0;
+      border-radius: $radius-md;
+    }
+  }
+  
 }
