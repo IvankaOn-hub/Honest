@@ -7,6 +7,10 @@
   overflow: hidden;
   background: $color-black; 
 
+  @include desktop{
+    padding-top: 6rem;
+  }
+
     & .container{
         z-index: 2;
         position: relative;
@@ -20,8 +24,8 @@
         linear-gradient(
             90deg,
             $color-black 0%,
-            rgba(11, 13, 16, 0.9) 22%,
-            rgba(11, 13, 16, 0.45) 100%
+            rgba(11, 13, 16, 0.638) 22%,
+            rgba(11, 13, 16, 0.35) 100%
         ),
         var(--bg-image);
         background-size: cover;

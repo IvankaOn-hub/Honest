@@ -387,7 +387,7 @@
     background: linear-gradient(180deg, rgba(127, 151, 199, 0.052), rgba($color-white, 0.016));
 
     .process-step__number {
-      color: rgba(127, 151, 199, 0.9);
+      color: $color-blue-hover;
     }
   }
 

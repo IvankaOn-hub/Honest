@@ -128,11 +128,8 @@
     backdrop-filter: blur(28px);
 
     .floating-booking__inner {
-      min-height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height: calc(100vh + 126px);
+      @include flex-center;
     }
 
     .floating-booking__intro,
@@ -155,6 +152,9 @@
     margin: 0 auto;
     margin-bottom: 2.125rem;
 
+    & h2{
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__purpose {
