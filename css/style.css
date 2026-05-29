@@ -3135,6 +3135,7 @@ textarea {
 @media (min-width: 64rem) {
   .services-hero__bg {
     inset: 0 0 0 52%;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 .services-hero__wrapper {
