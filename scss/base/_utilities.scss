@@ -59,6 +59,7 @@
   box-shadow: 0 20px 50px rgba($color-black, 0.08);
   margin: 0 auto;
   border-radius: $radius-md;
+  color: $color-black;
 
   @include tablet{
     padding: 2.5rem;
