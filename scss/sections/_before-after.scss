@@ -30,7 +30,7 @@
 
     @include desktop {
       grid-template-columns: 1.15fr repeat(3, 1fr);
-      align-items: start;
+      align-items: anchor-center;
     }
   }
 
@@ -45,6 +45,9 @@
     }
     & .eyebrow{
       color: $color-blue-light !important;
+    }
+    & .btn{
+      margin-top: 1.5rem;
     }
   }
 

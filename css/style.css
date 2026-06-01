@@ -1094,7 +1094,7 @@ textarea {
   position: fixed;
   right: 1rem;
   bottom: 3.5rem;
-  z-index: 1000;
+  z-index: 15;
   width: 3rem;
   height: 3rem;
   display: grid;
@@ -1120,12 +1120,7 @@ textarea {
 }
 
 .breadcrumbs {
-  margin-bottom: 2rem;
-}
-@media (min-width: 64rem) {
-  .breadcrumbs {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 1rem;
 }
 .breadcrumbs__list {
   display: flex;
@@ -1880,7 +1875,7 @@ textarea {
 @media (min-width: 64rem) {
   .before-after__projects {
     grid-template-columns: 1.15fr repeat(3, 1fr);
-    align-items: start;
+    align-items: anchor-center;
   }
 }
 .before-after__projects-head h3 {
@@ -1893,6 +1888,9 @@ textarea {
 }
 .before-after__projects-head .eyebrow {
   color: rgba(127, 151, 199, 0.7215686275) !important;
+}
+.before-after__projects-head .btn {
+  margin-top: 1.5rem;
 }
 .before-after__actions {
   display: flex;
@@ -3129,15 +3127,24 @@ textarea {
   position: relative;
   overflow: hidden;
   background: #0f0f11;
-}
-@media (min-width: 64rem) {
-  .pages-hero {
-    padding-top: 6rem;
-  }
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .pages-hero .container {
   z-index: 2;
   position: relative;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64rem) {
+  .pages-hero .container {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
 }
 .pages-hero__bg {
   position: absolute;
@@ -3156,10 +3163,16 @@ textarea {
   }
 }
 .pages-hero__wrapper {
+  flex: 1;
+  align-items: center;
+  height: 100%;
   z-index: 2;
 }
-.pages-hero__wrapper .section-title, .pages-hero__wrapper p {
+.pages-hero__wrapper .section-title {
   margin-bottom: 1.5rem;
+}
+.pages-hero__wrapper p {
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 48rem) {
   .pages-hero__wrapper {
@@ -3173,11 +3186,6 @@ textarea {
   .pages-hero__wrapper--desc {
     max-width: 40rem;
   }
-}
-.pages-hero__actions {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 3.125rem;
 }
 .pages-hero__card {
   margin-top: 3rem;
@@ -3205,6 +3213,7 @@ textarea {
   .pages-hero__card {
     margin-right: 7rem;
     margin-top: auto;
+    margin-bottom: 3rem;
     min-width: 24rem;
   }
 }
