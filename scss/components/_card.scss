@@ -175,7 +175,6 @@
       .card--service-category__image::before {
         transform: scale(1.06);
         opacity: 1;
-        filter: brightness(0.95) contrast(1.08);
       }
 
     }
@@ -216,7 +215,7 @@
           linear-gradient(
             90deg,
             rgba(20, 22, 26, 0.95) 0%,
-            rgba(20, 22, 26, 0.65) 35%,
+            rgba(20, 22, 26, 0.65) 13%,
             rgba(20, 22, 26, 0.18) 100%
           ),
           var(--bg-image);
@@ -224,8 +223,9 @@
         background-size: cover;
         background-position: center;
         opacity: .9;
+        filter: brightness(0.95) contrast(1.08);
 
-        filter: brightness(0.78) contrast(1.05);
+       /*  filter: brightness(0.78) contrast(1.05); */
 
         transition:
           transform 0.6s ease,
