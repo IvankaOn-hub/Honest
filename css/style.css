@@ -702,6 +702,7 @@ textarea {
 }
 .card--service-category {
   min-height: 15rem;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   background: linear-gradient(180deg, rgba(245, 245, 244, 0.055), rgba(245, 245, 244, 0.035));
@@ -729,13 +730,12 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 @media (min-width: 64rem) {
   .card--service-category__content {
     margin-right: 1rem;
     margin-bottom: 0;
-    padding: 1.5rem;
   }
 }
 .card--service-category__content P {

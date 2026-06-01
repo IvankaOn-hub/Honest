@@ -154,6 +154,7 @@
 
   &--service-category {
     min-height: 15rem;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     background: linear-gradient(180deg, rgba($color-white, 0.055), rgba($color-white, 0.035));
@@ -186,12 +187,11 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
     
     @include desktop{
       margin-right: 1rem;
       margin-bottom: 0;
-      padding: 1.5rem;
     }
     
     P{
