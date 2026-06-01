@@ -50,6 +50,49 @@
 
   }
 }
+.white-form {
+  max-width: 560px;
+  width: 100%;
+  padding: 2.5rem;
+  background: #fff;
+  border: 1px solid rgba($color-black, 0.08);
+  box-shadow: 0 20px 50px rgba($color-black, 0.08);
+  margin: 0 auto;
+  border-radius: $radius-md;
+
+  & .eyebrow {
+    color: $color-blue-light;
+  }
+
+  & .btn {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  & input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba($color-black, 0.15);
+    color: $color-black;
+    transition: border-color 0.25s ease;
+
+    &::placeholder {
+      color: rgba($color-black, 0.45);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-blue;
+    }
+  }
+}
 
 .head-section{
     margin-bottom: 60px;

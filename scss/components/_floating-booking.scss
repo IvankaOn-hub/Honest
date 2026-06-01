@@ -160,11 +160,8 @@
   &__purpose {
     margin-bottom: 1rem;
     padding: 1.25rem;
-
-    border-radius: $radius-sm;
-
-    background: rgba($color-white, 0.05);
-    border: 1px solid rgba($color-white, 0.08);
+    background: rgba($color-white, 0.02);
+    border-bottom: 1px solid rgba($color-white, 0.08);
 
     p {
       margin-bottom: .875rem;
