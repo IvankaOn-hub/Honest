@@ -68,6 +68,9 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
     }
+    a.active{
+      color: $color-blue-hover;
+    }
   }
 
   &__column,
@@ -94,6 +97,7 @@
     a:hover {
       color: $color-blue-hover;
     }
+  
   }
 
   &__contact {

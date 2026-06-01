@@ -316,7 +316,6 @@ initCallbackModal();
 
 
 // SWIPER SLIDER
-// SWIPER SLIDER
 function initSwiperSliders() {
   const tabletBreakpoint = window.matchMedia("(max-width: 1024px)");
   const sliders = new Map();
@@ -344,6 +343,22 @@ function initSwiperSliders() {
         },
         1024: {
           slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    },
+    
+    ourWorkshop: {
+      always: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
           spaceBetween: 20,
         },
       },
