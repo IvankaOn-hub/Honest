@@ -122,4 +122,18 @@
             margin-bottom: 1.5rem;
         }
     }
+
+    &--contact::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(
+      90deg,
+      #0f0f11 0%,
+      #0f0f11 55%,
+      rgba(15,15,17,.7) 75%,
+      rgba(15,15,17,.2) 100%
+    );
+}
 }
