@@ -2999,15 +2999,22 @@ textarea {
 
 .contact-section .card {
   transform: translateY(25%);
-  background-color: #0f0f11;
-  z-index: 9;
   padding: 1.5rem;
+  z-index: 9;
+  color: #0f0f11;
 }
 @media (min-width: 64rem) {
   .contact-section .card {
     transform: translateY(50%);
     padding: 2.5rem 2rem;
   }
+}
+.contact-section .card a:hover strong {
+  color: #2f8cff;
+}
+.contact-section .card strong {
+  color: #0f0f11;
+  transition: 0.3s ease;
 }
 
 .contact-map-bg {

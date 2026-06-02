@@ -126,12 +126,21 @@
   
   & .card{
     transform: translateY(25%);
-    background-color: $color-black;
-    z-index: 9;
     padding: 1.5rem;
+    z-index: 9;
+    color: $color-black;
+
     @include desktop{
       transform: translateY(50%);
       padding: 2.5rem 2rem;
+    }
+    & a:hover strong{
+      color: $color-blue;
+    }
+
+    & strong{
+      color: $color-black;
+      transition: $transition;
     }
   }
 }
