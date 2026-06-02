@@ -314,7 +314,6 @@ function initCallbackModal() {
 initCallbackModal();
 
 
-
 // SWIPER SLIDER
 function initSwiperSliders() {
   const tabletBreakpoint = window.matchMedia("(max-width: 1024px)");
@@ -348,22 +347,6 @@ function initSwiperSliders() {
       },
     },
     
-    ourWorkshop: {
-      always: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      },
-    },
-
     blog: {
       slidesPerView: 1,
       spaceBetween: 16,
