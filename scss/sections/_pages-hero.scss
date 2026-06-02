@@ -56,19 +56,29 @@
             opacity: .3;
         }
     }
+    
+    &__actions{
+        gap: $gap-md;
+        display: flex;
+    }
 
     &__wrapper{ 
         flex: 1;
         align-items: center;
         height: 100%;
         z-index: 2;
+        gap: $gap-md;
+        display: grid;
 
         .section-title{
             margin-bottom: 1.5rem;
         }
 
-        p{
+        /* p{
             margin-bottom: 2.5rem;
+        } */
+        & .btn{
+            margin-top: 2.5rem;
         }
 
         @include tablet{
@@ -135,5 +145,6 @@
       rgba(15,15,17,.7) 75%,
       rgba(15,15,17,.2) 100%
     );
-}
+    }
+
 }

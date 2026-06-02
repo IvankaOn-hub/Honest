@@ -3002,6 +3002,7 @@ textarea {
   padding: 1.5rem;
   z-index: 9;
   color: #0f0f11;
+  gap: 1rem;
 }
 @media (min-width: 64rem) {
   .contact-section .card {
@@ -3239,17 +3240,28 @@ textarea {
   height: stretch;
   opacity: 0.3;
 }
+.pages-hero__actions {
+  gap: 1.5rem;
+  display: flex;
+}
 .pages-hero__wrapper {
   flex: 1;
   align-items: center;
   height: 100%;
   z-index: 2;
+  gap: 1.5rem;
+  display: grid;
 }
 .pages-hero__wrapper .section-title {
   margin-bottom: 1.5rem;
 }
-.pages-hero__wrapper p {
-  margin-bottom: 2.5rem;
+.pages-hero__wrapper {
+  /* p{
+      margin-bottom: 2.5rem;
+  } */
+}
+.pages-hero__wrapper .btn {
+  margin-top: 2.5rem;
 }
 @media (min-width: 48rem) {
   .pages-hero__wrapper {

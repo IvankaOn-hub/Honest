@@ -129,6 +129,7 @@
     padding: 1.5rem;
     z-index: 9;
     color: $color-black;
+    gap: $gap-sm;
 
     @include desktop{
       transform: translateY(50%);
