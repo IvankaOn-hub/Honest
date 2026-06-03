@@ -58,6 +58,7 @@
     &__actions{
         gap: $gap-md;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__wrapper{ 

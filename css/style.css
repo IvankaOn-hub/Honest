@@ -892,7 +892,6 @@ textarea {
   border: 1px solid rgba(245, 245, 244, 0.06);
   background: linear-gradient(180deg, rgba(245, 245, 244, 0.026), rgba(245, 245, 244, 0.012));
   transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, opacity 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .card--portfolio.is-hidden {
   opacity: 0;
@@ -978,6 +977,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .card--portfolio__meta {
   display: flex;
@@ -3296,6 +3297,7 @@ textarea {
 .pages-hero__actions {
   gap: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
 }
 .pages-hero__wrapper {
   flex: 1;

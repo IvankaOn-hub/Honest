@@ -334,9 +334,6 @@
     background 0.35s ease,
     opacity 0.3s ease;
 
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
 
   &.is-hidden {
     opacity: 0;
@@ -447,7 +444,8 @@
   &__bottom{
     margin-top: auto;
     @include flex-between;
-    
+    flex-wrap: wrap;
+    gap: $gap-sm;
   }
 
   &__meta {
