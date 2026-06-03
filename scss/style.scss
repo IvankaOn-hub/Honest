@@ -18,6 +18,7 @@
 @use "./components/breadcrumb";
 @use "./components/list";
 @use "./components/table";
+@use "./components/badge";
 /* @use "./components/gallery"; */
 
 @use "./sections/topbar";
@@ -30,9 +31,9 @@
 @use "./sections/process";
 @use "./sections/faq";
 @use "./sections/seo-block";
-@use "./sections/blog";
 @use "./sections/cta-banner";
 @use "./sections/contact";
 @use "./sections/slider";
 @use "./sections/trust";
 @use "./sections/pages-hero";
+@use "./sections/portfolio";

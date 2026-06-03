@@ -431,3 +431,31 @@ function initScrollTopButton() {
 }
 
 initScrollTopButton();
+
+// PORTFOLIO FILTER
+function initPortfolioFilter() {
+  const filterButtons = document.querySelectorAll(".portfolio__filters [data-filter]");
+  const cards = document.querySelectorAll(".card--portfolio");
+
+  if (!filterButtons.length || !cards.length) return;
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach((btn) => btn.classList.remove("is-active"));
+      button.classList.add("is-active");
+
+      cards.forEach((card) => {
+        const category = card.dataset.category;
+
+        const shouldShow =
+          filter === "all" || category === filter;
+
+        card.classList.toggle("is-hidden", !shouldShow);
+      });
+    });
+  });
+}
+
+initPortfolioFilter();
