@@ -359,7 +359,7 @@
     .card--portfolio__link{
         color: $color-white;
 
-      span {
+      i {
         transform: translateX(5px);
       }
     }
@@ -426,13 +426,14 @@
     align-items: center;
     gap: $gap-sm;
     color: $color-blue-light;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     transition: $transition;
 
-    span {
-      
+    i {
+      margin-top: 2px;
+      font-size: .825rem;
       transition: transform 0.3s ease;
     }
 

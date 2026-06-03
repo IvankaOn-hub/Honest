@@ -465,30 +465,47 @@ function initScrollTopButton() {
 
 initScrollTopButton();
 
-// PORTFOLIO FILTER
-function initPortfolioFilter() {
-  const filterButtons = document.querySelectorAll(".portfolio__filters [data-filter]");
-  const cards = document.querySelectorAll(".card--portfolio");
 
-  if (!filterButtons.length || !cards.length) return;
+// FILTER
+function initFilter({
+  buttonsSelector,
+  itemsSelector,
+  itemCategoryAttr = "category",
+  buttonFilterAttr = "filter",
+  hiddenClass = "is-hidden",
+}) {
+  const buttons = document.querySelectorAll(buttonsSelector);
+  const items = document.querySelectorAll(itemsSelector);
 
-  filterButtons.forEach((button) => {
+  if (!buttons.length || !items.length) return;
+
+  buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
+      const filter = button.dataset[buttonFilterAttr];
 
-      filterButtons.forEach((btn) => btn.classList.remove("is-active"));
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
       button.classList.add("is-active");
 
-      cards.forEach((card) => {
-        const category = card.dataset.category;
+      items.forEach((item) => {
+        const category = item.dataset[itemCategoryAttr];
+        const shouldShow = filter === "all" || category === filter;
 
-        const shouldShow =
-          filter === "all" || category === filter;
-
-        card.classList.toggle("is-hidden", !shouldShow);
+        item.classList.toggle(hiddenClass, !shouldShow);
       });
     });
   });
 }
 
-initPortfolioFilter();
+initFilter({
+  buttonsSelector: ".portfolio__filters [data-filter]",
+  itemsSelector: ".card--portfolio",
+});
+
+initFilter({
+  buttonsSelector: "[data-price-filter]",
+  itemsSelector: "[data-price-category]",
+  itemCategoryAttr: "priceCategory",
+  buttonFilterAttr: "priceFilter",
+});
+
+

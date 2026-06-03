@@ -23,10 +23,12 @@
     background: rgba($color-blue, 0.025);
     border-bottom: 0.0625rem solid rgba($color-black, 0.06);
     padding: 1.5rem;
+    font-family: "Inter", sans-serif;
+
 
     span {
       color: $color-black;
-      font-size: .825rem;
+      font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;

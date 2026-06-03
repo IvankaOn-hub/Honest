@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HonestCar - Portfolio single</title>
+    <title>HonestCar - Pricing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
@@ -57,7 +58,9 @@
         <a href="index.html" class="header__logo">
           <img src="images/logo.png" alt="Logo" />
         </a>
+
         <div class="header__actions">
+          
           <a class="" href="tel:504367207">
             <i class="fa-solid fa-phone icon-md"></i>
           </a>
@@ -82,7 +85,7 @@
             <a href="services-category.html">Usługi</a>
             <a href="special-offers.html">Promocje</a>
             <a href="about-us.html">O nas</a>
-            <a href="pricing.html">Cennik</a>
+            <a href="pricing.html" class="active">Cennik</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Kontakt</a>
           </nav>
@@ -105,198 +108,157 @@
     </header>
 
     <main>
-      <!-- BreadCrumbs -->
-      <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-              <ol class="breadcrumbs__list">
-                  <li class="breadcrumbs__item">
-                      <a href="index.html" class="breadcrumbs__link">Strona główna</a>
-                  </li>
-                  <li class="breadcrumbs__item">
-                      <a href="portfolio.html" class="breadcrumbs__link">Portfolio</a>
-                  </li>
-                  <li class="breadcrumbs__item" aria-current="page">
-                      <span class="breadcrumbs__current">Wymiana rozrządu</span>
-                  </li>
-              </ol>
-          </nav>
-      </div>
-
-      <section class="portfolio-single">
+      <!-- Hero Banner -->
+      <section class="pages-hero">
+        <div class="pages-hero__media" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
         <div class="container">
-          <div class="portfolio-single__layout">
-            <!-- LEFT -->
-            <aside class="portfolio-single__meta">
-               <span class="eyebrow">Silnik</span>
-                <h2>Wymiana rozrządu</h2>
-                <ul class="portfolio-single__facts">
-                  <li>
-                    <i class="fa-regular fa-clock"></i>
-                    <div>
-                      <span>Czas realizacji</span>
-                      <strong>1 dzień</strong>
-                    </div>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-shield"></i>
-                    <div>
-                      <span>Gwarancja</span>
-                      <strong>12 miesięcy</strong>
-                    </div>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-car"></i>
-                    <div>
-                      <span>Marka / Model</span>
-                      <strong>BMW 320d (F30)</strong>
-                    </div>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-gauge"></i>
-                    <div>
-                      <span>Przebieg</span>
-                      <strong>186 500 km</strong>
-                    </div>
-                  </li>
-                </ul>
-                <div class="portfolio-single__actions">
-                  <button class="btn btn--primary js-open-booking" type="button">
-                    Umów podobną usługę
-                  </button>
-                  <a href="portfolio.html" class="btn btn--outline">
-                    Wróć do portfolio
-                  </a>
-                </div>
-            </aside>
-            <!-- CENTER -->
-            <div class="portfolio-single__content">
-              <div class="case-gallery">
-                <div class="swiper case-gallery__main js-case-gallery-main">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/before-engine-oil-leak.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/engine-oil-leak-after.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                    <img src="./images/before-after/headlight-restoration-after.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/brake-disc-pads-after.jpg" alt="">
-                    </div>
-
+          <!-- 03. BreadCrumbs -->
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html" class="breadcrumbs__link">Strona główna</a>
+                        </li>
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__current">Cennik</span>
+                        </li>
+                    </ol>
+          </nav>
+          <div class="pages-hero__wrapper">
+            <div class="pages-hero__wrapper--desc">
+               <span class="eyebrow">Cennik</span>
+               <h1 class="section-title">Cennik usług samochodowych</h1>
+               <p>
+                   Kompleksowa diagnostyka komputerowa i techniczna auta. Sprawdzamy błędy,
+                   parametry pracy podzespołów oraz rzeczywisty stan samochodu przed naprawą,
+                   zakupem lub dalszą eksploatacją.
+               </p>
+               <div class="hero__highlights">
+                  <div class="hero__highlight">
+                    <span class="hero__highlight-number"><i class="fa-solid fa-shield-halved"></i></span>
+                    <p>Gwarancji na usługi</p>
                   </div>
-                </div>
-
-                <div class="swiper case-gallery__thumbs js-case-gallery-thumbs">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/before-engine-oil-leak.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/engine-oil-leak-after.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                    <img src="./images/before-after/headlight-restoration-after.jpg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                      <img src="./images/before-after/brake-disc-pads-after.jpg" alt="">
-                    </div>
-
+                  <div class="hero__highlight">
+                    <span class="hero__highlight-number"><i class="fa-regular fa-clock"></i></span>
+                    <p>Szybka realizacja</p>
                   </div>
-                </div>
-
-              </div>
-              <div class="portfolio-single__story">
-                  <article>
-                    <h3>Problem</h3>
-                    <p>
-                      Klient zgłosił nierówną pracę silnika oraz metaliczne
-                      dźwięki dochodzące z okolic rozrządu.
-                    </p>
-                  </article>
-                  <article>
-                    <h3>Rozwiązanie</h3>
-                    <p>
-                      Wymieniliśmy kompletny zestaw rozrządu wraz z pompą wody
-                      oraz przeprowadziliśmy testy kontrolne.
-                    </p>
-                  </article>
-                  <article>
-                    <h3>Efekt</h3>
-                    <p>
-                      Silnik pracuje prawidłowo, błędy zostały usunięte,
-                      a klient otrzymał gwarancję na usługę.
-                    </p>
-                  </article>
+                  <div class="hero__highlight">
+                    <span class="hero__highlight-number"><i class="fa-regular fa-star"></i></span>
+                    <p>Uczciwe ceny</p>
+                  </div>
               </div>
             </div>
-            <!-- RIGHT -->
-            <aside class="portfolio-single__sidebar">
-              <div class="card">
-                <h3>Masz pytania?</h3>
-                <p>Skontaktuj się z nami - odpowiemy na wszystkie pytania.</p>
-                <button class="btn btn--outline js-open-booking" type="button">
-                  Umów wizytę
-                </button>
-              </div>
-
-              <div class="card">
-                <h3>Informacje o realizacji</h3>
-                <ul class="list">
-                  <li>Kategoria: Silnik</li>
-                  <li>Usługa: Wymiana rozrządu</li>
-                  <li>Model: BMW 320d</li>
-                  <li>Przebieg: 186 500 km</li>
-                  <li>Data: 12.04.2024</li>
-                </ul>
-              </div>
-
-              <div class="card">
-                <h3>Zakres prac</h3>
-                <ul class="list">
-                  <li><i class="fa-solid fa-check"></i>Diagnostyka</li>
-                  <li><i class="fa-solid fa-check"></i>Demontaż osprzętu</li>
-                  <li><i class="fa-solid fa-check"></i>Wymiana rozrządu</li>
-                  <li><i class="fa-solid fa-check"></i>Wymiana pompy wody</li>
-                  <li><i class="fa-solid fa-check"></i>Testy końcowe</li>
-                </ul>
-              </div>
-
-              <div class="card">
-                <h3>Użyte części</h3>
-                <ul class="list">
-                  <li>INA</li>
-                  <li>HEPU</li>
-                  <li>OEM</li>
-                </ul>
-              </div>
-
-            </aside>
           </div>
         </div>
       </section>
 
-       <!-- CTA BANNER -->
-      <section class="cta-banner js-white-bg">
-        <div class="cta-banner__inner">
-          <div class="cta-banner__content">
-            <span class="eyebrow">Zarezerwuj usługę</span>
-            <h2 class="title-h2">Twój samochód zasługuje na najlepszą opiekę.</h2>
-            <p class="cta-banner__text">Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach.</p>
-            <button type="button" class="btn btn--primary js-open-booking">Zarezerwuj wizytę</button>
+      <!-- Price List -->
+      <section class="pricing-list">
+        <div class="container">
+
+          <div class="head-section">
+            <div>
+              <span class="eyebrow">Cennik usług</span>
+              <h2 class="title-h2">Precyzyjna pielęgnacja Twojego samochodu</h2>
+            </div>
+            <div>
+              <p>Od diagnostyki po skomplikowane naprawy - zapewniamy jakość na poziomie dealerskim z indywidualnym podejściem.</p>
+              <button class="btn btn--primary js-open-booking">Umów wizytę</button>
+            </div>
           </div>
+
+          <div class="split-layout split-layout--media-right">
+            <aside class="split-layout__content pricing-list__sidebar">
+              <button class="is-active" data-price-filter="all">Wszystkie usługi</button>
+              <button data-price-filter="diagnostyka">Diagnostyka</button>
+              <button data-price-filter="silnik">Silnik</button>
+              <button data-price-filter="hamulce">Układ hamulcowy</button>
+              <button data-price-filter="zawieszenie">Zawieszenie</button>
+              <button data-price-filter="elektronika">Elektronika</button>
+              <button data-price-filter="skrzynia">Skrzynia biegów</button>
+              <button data-price-filter="klimatyzacja">Klimatyzacja</button>
+              <button data-price-filter="olej">Wymiana oleju</button>
+              <button data-price-filter="inne">Inne usługi</button>
+            </aside>
+
+            <div class="split-layout__media price-table">
+
+              <ul class="price-table__list">
+                <li class="price-table__head">
+                  <span>Usługa</span>
+                  <span>Cena</span>
+                </li>
+                <div class="price-table__content">
+
+                  <li class="price-table__row" data-price-category="diagnostyka">
+                    <span>Diagnostyka komputerowa</span>
+                    <strong>od 150 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="diagnostyka">
+                    <span>Kasowanie błędów</span>
+                    <strong>od 80 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="diagnostyka">
+                    <span>Diagnostyka silnika</span>
+                    <strong>od 200 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="diagnostyka">
+                    <span>Test szczelności układu dolotowego</span>
+                    <strong>od 150 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="silnik">
+                    <span>Wymiana rozrządu</span>
+                    <strong>od 1200 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="silnik">
+                    <span>Wymiana sprzęgła</span>
+                    <strong>od 900 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="hamulce">
+                    <span>Wymiana klocków hamulcowych przód</span>
+                    <strong>od 250 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="hamulce">
+                    <span>Wymiana tarcz hamulcowych przód</span>
+                    <strong>od 350 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="zawieszenie">
+                    <span>Wymiana amortyzatorów 1 szt.</span>
+                    <strong>od 250 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="zawieszenie">
+                    <span>Geometria zawieszenia</span>
+                    <strong>od 200 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="klimatyzacja">
+                    <span>Napełnianie klimatyzacji</span>
+                    <strong>od 200 zł</strong>
+                  </li>
+
+                  <li class="price-table__row" data-price-category="olej">
+                    <span>Wymiana oleju z filtrem</span>
+                    <strong>od 150 zł</strong>
+                  </li>
+                </div>
+              </ul>
+            </div>
+
+          </div>
+
+          <p class="pricing-list__note">
+            <i class="fa-solid fa-circle-info"></i>
+            Podane ceny są cenami orientacyjnymi. Ostateczna wycena może się różnić w zależności od modelu pojazdu.
+          </p>
         </div>
-        <div class="cta-banner__image"></div>
       </section>
 
       <!-- Contact -->
@@ -380,7 +342,7 @@
                 <a href="services-category.html">Usługi</a>
                 <a href="special-offers.html">Promocje</a>
                 <a href="about-us.html">O nas</a>
-                <a href="pricing.html">Cennik</a>
+                <a href="pricing.html" class="active">Cennik</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Kontakt</a>
               </ul>

@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+
+.pricing-list {
+
+  .split-layout {
+    gap: 2rem;
+
+    &__content{
+      margin-bottom: 0;
+    }
+  }
+
+  & .price-table__content{
+      max-height: 35rem;
+  }
+
+  &__sidebar {
+    background: rgba($color-white, 0.04);
+    border: 1px solid rgba($color-white, 0.08);
+    border-radius: $radius-md;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: $radius-md;
+
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba($color-gray, 0.25) rgba($color-gray, 0.04);
+
+    @include desktop {
+      display: block;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0.375rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba($color-gray, 0.04);
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color-gray, 0.35);
+        border-radius: 999px;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background: rgba($color-gray, 0.5);
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      color: $color-gray-light;
+      transition: all $transition;
+      cursor: pointer;
+
+      @include desktop{
+        text-align: left;
+      }
+
+      &:hover {
+        background: rgba($color-white, .04);
+      }
+
+      &.is-active {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    color: $color-gray;
+    font-size: .875rem;
+
+    i {
+      color: $color-blue-light;
+    }
+  }
+}
+
