@@ -408,6 +408,39 @@ function initSwiperSliders() {
 
 initSwiperSliders();
 
+// GALLERY SWIPER SLIDER
+function initCaseGallery() {
+  const mainGallery = document.querySelector(".js-case-gallery-main");
+  const thumbsGallery = document.querySelector(".js-case-gallery-thumbs");
+
+  if (!mainGallery || !thumbsGallery) return;
+
+  const thumbsSwiper = new Swiper(thumbsGallery, {
+    slidesPerView: 2,
+    spaceBetween: 12,
+    watchSlidesProgress: true,
+    breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+  });
+
+  new Swiper(mainGallery, {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+  });
+}
+
+initCaseGallery();
 
 // SCROLL TOP BUTTON
 function initScrollTopButton() {
