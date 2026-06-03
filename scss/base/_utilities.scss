@@ -72,6 +72,9 @@
   & .btn {
     width: fit-content;
     margin: 0 auto;
+    @include tablet{
+      margin-top: 1rem;
+    }
   }
 
   & form {

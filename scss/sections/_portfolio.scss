@@ -11,8 +11,6 @@
     margin-bottom: 2.5rem;
     padding: 1rem;
     border-radius: $radius-md;
-    border: 1px solid $color-border;
-    background: $color-glass;
 
     overflow-x: auto;
     scrollbar-width: thin;
@@ -57,6 +55,13 @@
       &.is-active {
         background: $color-blue;
       }
+    }
+  }
+
+  & .grid {
+    
+    @include desktop{
+      gap: 2.5rem;
     }
   }
 }

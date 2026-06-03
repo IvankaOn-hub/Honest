@@ -441,13 +441,17 @@
     }
   }
 
+  &__bottom{
+    margin-top: 1.5rem;
+    @include flex-between;
+    @include tablet{
+      margin-top: 2.5rem;
+    }
+  }
+
   &__meta {
       display: flex;
       gap: 1rem;
-
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-
       font-size: .875rem;
       color: $color-gray;
 
