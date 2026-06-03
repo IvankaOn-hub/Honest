@@ -357,7 +357,7 @@
       );
 
     img {
-      transform: scale(1.04);
+      transform: scale(1.02);
     }
     .card--portfolio__link{
         color: $color-white;
@@ -371,7 +371,6 @@
 
   > a {
     display: block;
-    overflow: hidden;
   }
 
   img {
@@ -382,15 +381,21 @@
     transition:
       transform 0.7s ease,
       filter 0.5s ease;
+      border-bottom: 1px solid $color-blue-light;
   }
 
 
   &__content {
-    padding: 24px;
-
+    padding: 1.5rem;
     display: flex;
     flex: 1;
     flex-direction: column;
+    min-height: 10rem;
+
+    p{
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__category {
@@ -420,16 +425,14 @@
 
   &__link {
     margin-top: auto;
-
     display: inline-flex;
     align-items: center;
     gap: $gap-sm;
-
-    color: rgba(127, 151, 199, 0.82);
-
+    color: $color-blue-light;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
+    transition: $transition;
 
     span {
       
@@ -442,11 +445,9 @@
   }
 
   &__bottom{
-    margin-top: 1.5rem;
+    margin-top: auto;
     @include flex-between;
-    @include tablet{
-      margin-top: 2.5rem;
-    }
+    
   }
 
   &__meta {

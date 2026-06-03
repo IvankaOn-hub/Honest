@@ -14,14 +14,12 @@
     & .container{
         z-index: 2;
         position: relative;
-        padding-top: 2rem;
         padding-bottom: 3rem;
         min-height: inherit;
         display: flex;
         flex-direction: column;
 
         @include desktop{
-            padding-top: 2.5rem;
             padding-bottom: 4rem;
         }
        

@@ -96,7 +96,7 @@ h4 {
 
 h5 {
   font-family: "Red Hat Display", sans-serif;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.025em;
@@ -906,7 +906,7 @@ textarea {
   background: linear-gradient(180deg, rgba(245, 245, 244, 0.035), rgba(47, 140, 255, 0.018));
 }
 .card--portfolio:hover img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 .card--portfolio:hover .card--portfolio__link {
   color: #f5f5f4;
@@ -916,7 +916,6 @@ textarea {
 }
 .card--portfolio > a {
   display: block;
-  overflow: hidden;
 }
 .card--portfolio img {
   width: 100%;
@@ -924,12 +923,18 @@ textarea {
   display: block;
   object-fit: cover;
   transition: transform 0.7s ease, filter 0.5s ease;
+  border-bottom: 1px solid rgba(127, 151, 199, 0.7215686275);
 }
 .card--portfolio__content {
-  padding: 24px;
+  padding: 1.5rem;
   display: flex;
   flex: 1;
   flex-direction: column;
+  min-height: 10rem;
+}
+.card--portfolio__content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 .card--portfolio__category {
   margin-bottom: 14px;
@@ -956,10 +961,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  color: rgba(127, 151, 199, 0.82);
+  color: rgba(127, 151, 199, 0.7215686275);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 .card--portfolio__link span {
   transition: transform 0.3s ease;
@@ -968,15 +974,10 @@ textarea {
   color: rgba(245, 245, 244, 0.88);
 }
 .card--portfolio__bottom {
-  margin-top: 1.5rem;
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-@media (min-width: 48rem) {
-  .card--portfolio__bottom {
-    margin-top: 2.5rem;
-  }
 }
 .card--portfolio__meta {
   display: flex;
@@ -1279,7 +1280,12 @@ textarea {
 }
 
 .breadcrumbs {
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
+}
+@media (min-width: 64rem) {
+  .breadcrumbs {
+    margin: 2rem 0;
+  }
 }
 .breadcrumbs__list {
   display: flex;
@@ -1421,8 +1427,8 @@ textarea {
   left: 1.5rem;
   top: 1.5rem;
   padding: 0.25rem 1rem;
-  border-radius: 8px;
-  background: rgba(47, 140, 255, 0.8);
+  border-radius: 4px;
+  background: #4286D5;
   color: #f5f5f4;
   font-size: 0.85rem;
   letter-spacing: 0.14em;
@@ -3256,7 +3262,6 @@ textarea {
 .pages-hero .container {
   z-index: 2;
   position: relative;
-  padding-top: 2rem;
   padding-bottom: 3rem;
   min-height: inherit;
   display: flex;
@@ -3264,7 +3269,6 @@ textarea {
 }
 @media (min-width: 64rem) {
   .pages-hero .container {
-    padding-top: 2.5rem;
     padding-bottom: 4rem;
   }
 }
