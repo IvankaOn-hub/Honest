@@ -78,19 +78,5 @@
       }
     }
   }
-
-  &__note {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-
-    color: $color-gray;
-    font-size: .875rem;
-
-    i {
-      color: $color-blue;
-    }
-  }
 }
 

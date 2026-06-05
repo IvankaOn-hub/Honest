@@ -429,6 +429,8 @@
   &--light{
     background-color: $color-white;
     border-color: $color-border-hover;
+    color: $color-black;
+
   
 
     &:hover {
@@ -467,6 +469,61 @@
       border-radius: $radius-md;
     }
   }
+  
+  &.card--promotion{
+  margin: 0 auto;
+  padding: 2rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba($color-blue, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
 
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+
+   @include desktop {
+    padding: 5rem;
+    max-width: 28rem;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: $color-gray;
+
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+    color: $color-blue-light !important;
+    font-family: $font-heading;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+  
+  hr{
+    border-color: rgba($color-gray,.1);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: $color-gray;
+  }
+ 
+}
  
 }

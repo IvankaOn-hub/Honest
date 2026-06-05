@@ -17,7 +17,7 @@
   }
 
 
-  & .btn.btn--outline {
+  & .btn.btn--outline  {
     backdrop-filter: blur(32px);
     background-color: rgba(156, 156, 159, 0.005);
     border: 0.0625rem solid rgb(39 39 39 / 12%);
@@ -39,6 +39,12 @@
     }
 
   }
+   .card .btn.btn--outline {
+     background: rgba($color-white, 0.035);
+    border: 1px solid rgba($color-white, 0.14);
+    backdrop-filter: blur(10px);
+    color: $color-white;
+  }
 
   & .card:not(.card--light){
     background-color: $color-black;
@@ -49,6 +55,7 @@
     }
 
   }
+
 }
 .white-form {
   max-width: 560px;
@@ -241,4 +248,17 @@ textarea {
 
 .is-hidden {
   display: none !important;
+}
+
+.text-info{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: $color-gray;
+    font-size: 0.875rem;
+
+    & i {
+      color: $color-blue-light;
+    }
 }
