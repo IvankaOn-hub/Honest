@@ -20,7 +20,7 @@
   }
 
   &__head {
-    background: rgba($color-blue, 0.025);
+    background: rgba($color-blue, 0.035);
     border-bottom: 0.0625rem solid rgba($color-black, 0.06);
     padding: 1.5rem;
     font-family: "Inter", sans-serif;
@@ -80,7 +80,7 @@
     }
 
     &:hover {
-      background: rgba($color-blue, 0.025);
+      background: rgba($color-blue, 0.035);
 
       strong {
         background: rgba($color-blue, 0.08);
