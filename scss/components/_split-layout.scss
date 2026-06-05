@@ -3,10 +3,10 @@
 
 .split-layout {
   display: grid;
-  gap: 32px;
+  gap: 2rem;
 
   @include desktop {
-    gap: 56px;
+    gap: 3.5rem;
   }
 
   &__content{
@@ -62,6 +62,18 @@
   &--equal {
     @include desktop {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &--sidebar {
+    @include desktop {
+      grid-template-columns: 0.75fr 0.25fr;
+    }
+
+    & .card--light:hover{
+      transform: translateY(0);
+    }
+    & aside.grid{
+      height: fit-content;
     }
   }
 

@@ -220,6 +220,17 @@ textarea {
   }
 }
 
+.mt-sm{
+  margin-top: 1.5rem;
+}
+
+.mt-md {
+  margin-top: 1.5rem;
+  @include tablet{
+    margin-top: 2.5rem;
+  }
+}
+
 .border-rounded{
   border-radius: $radius-md;
 }

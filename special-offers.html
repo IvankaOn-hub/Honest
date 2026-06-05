@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HonestCar</title>
+    <title>HonestCar - Special Offers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -51,6 +51,7 @@
         </div>
       </div>
     </div>
+
     <!-- Header / Navigation -->
     <header class="header">
       <div class="header__wrapper">
@@ -82,10 +83,10 @@
         <div class="header__mobile">
           <nav class="header__nav">
             <a href="services-category.html">Usługi</a>
-            <a href="special-offers.html">Promocje</a>
+            <a href="special-offers.html" class="active">Promocje</a>
             <a href="about-us.html">O nas</a>
             <a href="pricing.html">Cennik</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Kontakt</a>
           </nav>
 
@@ -109,8 +110,8 @@
     <main>
       <!-- Hero Banner -->
       <section class="pages-hero">
-          <div class="pages-hero__media" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
-          <div class="container">
+            <div class="pages-hero__media" style="--bg-image: url(&quot;../images/services/diagnostyka.jpg&quot;)"></div>
+            <div class="container">
                 <!-- 03. BreadCrumbs -->
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ol class="breadcrumbs__list">
@@ -118,181 +119,226 @@
                             <a href="index.html" class="breadcrumbs__link">Strona główna</a>
                         </li>
                         <li class="breadcrumbs__item" aria-current="page">
-                            <span class="breadcrumbs__current">Portfolio</span>
+                            <span class="breadcrumbs__current">Promocje</span>
                         </li>
                     </ol>
                 </nav>
                 <div class="pages-hero__wrapper">
                     <div class="pages-hero__wrapper--desc">
-                        <span class="eyebrow">Portfolio</span>
-                        <h1 class="section-title">Naszę Realizację</h1>
+                        <span class="eyebrow">Akcje specjalne</span>
+                        <h1 class="section-title">Aktualne promocje i specjalne oferty</h1>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset.
+                            Skorzystaj z najlepszych okazji w naszym serwisie. Regularnie przygotowujemy atrakcyjne promocje na wybrane usługi, pakiety serwisowe i diagnostykę samochodową.
                         </p>
-                        <div class="pages-hero__actions">
-                            <a href="#portfolio" class="btn btn--primary">
-                                Zobacz portfolio 
-                            </a>
-                            <button class="btn btn--outline js-open-booking" type="button">Umów wizytę</button>
+                        <div class="hero__highlights">
+                        <div class="hero__highlight">
+                          <span class="hero__highlight-number"><i class="fa-solid fa-solid fa-tag"></i></span>
+                          <p>Najlepsze ceny</p>
+                        </div>
+                        <div class="hero__highlight">
+                          <span class="hero__highlight-number"><i class="fa-solid fa-shield-halved"></i></span>
+                          <p>Sprawdzone usługi</p>
+                        </div>
+                        <div class="hero__highlight">
+                          <span class="hero__highlight-number"><i class="fa-regular fa-clock"></i></span>
+                          <p>Ogranoczony czas</p>
                         </div>
                     </div>
+                    </div>
                 </div>
-          </div>
+            </div>
       </section>
 
-      <section id="portfolio" class="portfolio">
+      <!-- Special Offers List -->
+      <section class="special-offers white-section" id="offers">
         <div class="container">
-          <div class="portfolio__filters card">
-            <button class="is-active" data-filter="all">Wszystkie</button>
-            <button data-filter="diagnostyka">Diagnostyka</button>
-            <button data-filter="silnik">Silnik</button>
-            <button data-filter="hamulce">Układ hamulcowy</button>
-            <button data-filter="zawieszenie">Zawieszenie</button>
-            <button data-filter="elektronika">Elektronika</button>
-            <button data-filter="skrzynia">Skrzynia biegów</button>
-            <button data-filter="inne">Inne</button>
+          <div class="head-section">
+            <div>
+              <span class="eyebrow">Aktualne oferty</span>
+              <h2 class="section-title">Wszystkie promocje</h2> 
+            </div>
           </div>
-          <div class="grid grid--3">
-            <article class="card card--main" data-category="silnik">
-              <div class="position-relative">
-                <img src="images/before-after/brake-disc-pads-after.jpg" alt="">
-                <span class="badge">Silnik</span>
-              </div>
-              <div class="card--main__content">
-                <span class="card--main__category">
-                  BMW 320d
-                </span>
-                <h3>Wymiana rozrządu</h3>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..
-                </p>
-                <div class="card--main__bottom">
-                  <div class="card--main__meta">
-                    <span><i class="fa-regular fa-calendar"></i>1 dzień</span>
-                    <span><i class="fa-solid fa-shield-halved"></i>12 mies. gwarancji</span>
-                  </div>
-                  <a href="portfolio-single.html" class="card--main__link">
-                    Zobacz realizację
-                    <i class="fa-solid fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--main" data-category="diagnostyka">
-              <div class="position-relative">
-                <img src="images/before-after/headlight-restoration-after.jpg" alt="">
-                <span class="badge">Diagnostyka</span>
-              </div>
-              <div class="card--main__content">
-                <span class="card--main__category">
-                  Mercedes C220
-                </span>
-                <h3>Diagnostyka Komputerowa</h3>
-                <p>
-                  It is a long established fact that a reader will be distracted.
-                </p>
-                <div class="card--main__bottom">
-                  <div class="card--main__meta">
-                    <span><i class="fa-regular fa-calendar"></i>1 dzień</span>
-                    <span><i class="fa-solid fa-shield-halved"></i>12 mies. gwarancji</span>
-                  </div>
-                  <a href="portfolio-single.html" class="card--main__link">
-                    Zobacz realizację
-                    <i class="fa-solid fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--main" data-category="hamulce">
-              <div class="position-relative">
-                <img src="images/before-after/brake-disc-pads-before.jpg" alt="">
-                <span class="badge">Hamulce</span>
-              </div>
-              <div class="card--main__content">
-                <span class="card--main__category">
-                  BMW 320d
-                </span>
-                <h3>Wymiana rozrządu</h3>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..
-                </p>
-                <div class="card--main__bottom">
-                  <div class="card--main__meta">
-                    <span><i class="fa-regular fa-calendar"></i>1 dzień</span>
-                    <span><i class="fa-solid fa-shield-halved"></i>12 mies. gwarancji</span>
-                  </div>
-                  <a href="portfolio-single.html" class="card--main__link">
-                    Zobacz realizację
-                    <i class="fa-solid fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--main" data-category="silnik">
-              <div class="position-relative">
-                <img src="images/before-after/headlight-restoration-after.jpg" alt="">
-                <span class="badge">Silnik</span>
-              </div>
-              <div class="card--main__content">
-                <span class="card--main__category">
-                  Mercedes C220
-                </span>
-                <h3>Diagnostyka Komputerowa</h3>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..
-                </p>
-                <div class="card--main__bottom">
-                  <div class="card--main__meta">
-                    <span><i class="fa-regular fa-calendar"></i>1 dzień</span>
-                    <span><i class="fa-solid fa-shield-halved"></i>12 mies. gwarancji</span>
-                  </div>
-                  <a href="portfolio-single.html" class="card--main__link">
-                    Zobacz realizację
-                    <i class="fa-solid fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--main" data-category="diagnostyka">
-              <div class="position-relative">
-                <img src="images/before-after/brake-disc-pads-before.jpg" alt="">
-                <span class="badge">Diagnosika</span>
-              </div>
-              <div class="card--main__content">
-                <span class="card--main__category">
-                  BMW 320d
-                </span>
-                <h3>Wymiana rozrządu</h3>
-                <p>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..
-                </p>
-                <div class="card--main__bottom">
-                  <div class="card--main__meta">
-                    <span><i class="fa-regular fa-calendar"></i>1 dzień</span>
-                    <span><i class="fa-solid fa-shield-halved"></i>12 mies. gwarancji</span>
-                  </div>
-                  <a href="portfolio-single.html" class="card--main__link">
-                    Zobacz realizację
-                    <i class="fa-solid fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+          
 
-       <!-- CTA BANNER -->
-      <section class="cta-banner js-white-bg">
-        <div class="cta-banner__inner">
-          <div class="cta-banner__content">
-            <span class="eyebrow">Zarezerwuj usługę</span>
-            <h2 class="title-h2">Twój samochód zasługuje na najlepszą opiekę.</h2>
-            <p class="cta-banner__text">Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach.</p>
-            <button type="button" class="btn btn--primary js-open-booking">Zarezerwuj wizytę</button>
+          <div class="split-layout split-layout--sidebar">
+
+            <!-- Offers -->
+            <div class="offers-slider tablet-slider swiper js-tablet-slider" data-slider="offers">
+              <div class="grid grid--3 swiper-wrapper">
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="card card--main swiper-slide">
+                  <div class="card--main__image">
+                    <img src="images/services/blacharstwo-i-lakiernictwo.jpg" alt="">
+                    <span class="badge">-20%</span>
+                  </div>
+
+                  <div class="card--main__content">
+                    <span class="card--main__category">Diagnostyka</span>
+                    <h5>Wymiana sprzęgła ze zniżką 20%</h5>
+                    <p>Dostępne u nas części i jakość, na której możesz polegać.</p>
+
+                    <div class="card--main__bottom">
+                      <div class="card--main__meta">
+                       <span><i class="fa-regular fa-calendar"></i> Do 31.05.2026</span>
+                      </div>
+                      <a href="#" class="icon-round" aria-label="Zobacz ofertę"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                  </div>
+                </article>
+              </div>
+                <div class="offers-slider__pagination swiper-pagination"></div>
+                <div class="text-center mt-md d-xl-block">
+                  <a href="#" class="btn btn--primary">Pokaż więcej promocji</a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="grid">
+
+              <div class="card card--light">
+                <h3>Wyszukaj promocję</h3>
+
+                <label class="search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input type="search" placeholder="Szukaj promocji...">
+                </label>
+              </div>
+
+              <div class="card card--light">
+                <h3>Kategorie</h3>
+
+                <ul class="list list--categories">
+                  <li><a href="#" class="is-active">Wszystkie promocje <span class="list--categories__count">7</span></a></li>
+                  <li><a href="#">Serwis i naprawa <span class="list--categories__count">4</span></a></li>
+                  <li><a href="#">Diagnostyka <span class="list--categories__count">2</span></a></li>
+                  <li><a href="#">Klimatyzacja <span class="list--categories__count">1</span></a></li>
+                  <li><a href="#">Lakiernictwo <span class="list--categories__count">2</span></a></li>
+                  <li><a href="#">Detailing <span class="list--categories__count">1</span></a></li>
+                </ul>
+              </div>
+
+              <div class="card card--light">
+                <h3>Popularne usługi</h3>
+
+                <div class="list list--tags">
+                  <a href="#">Wymiana rozrządu</a>
+                  <a href="#">Sprzęgło</a>
+                  <a href="#">Klimatyzacja</a>
+                  <a href="#">Diagnostyka</a>
+                  <a href="#">Hamulce</a>
+                  <a href="#">Geometria</a>
+                  <a href="#">Olej</a>
+                  <a href="#">Zawieszenie</a>
+                  <a href="#">Lakierowanie</a>
+                  <a href="#">Wnętrze</a>
+                </div>
+              </div>
+
+            </aside>
+
           </div>
+
         </div>
-        <div class="cta-banner__image"></div>
       </section>
 
       <!-- Contact -->
@@ -374,10 +420,10 @@
 
               <ul class="footer-accordion__content">
                 <a href="services-category.html">Usługi</a>
-                <a href="special-offers.html">Promocje</a>
+                <a href="special-offers.html" class="active">Promocje</a>
                 <a href="about-us.html">O nas</a>
                 <a href="pricing.html">Cennik</a>
-                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Kontakt</a>
               </ul>
             </div>

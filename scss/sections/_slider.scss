@@ -1,6 +1,10 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+.swiper-wrapper {
+  height: auto;
+}
+
 .always-slider{
 
   overflow: hidden;

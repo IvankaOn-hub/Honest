@@ -320,6 +320,16 @@ function initSwiperSliders() {
   const sliders = new Map();
 
   const sliderSettings = {
+    offers: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    },
     reviews: {
       slidesPerView: 1.15,
       spaceBetween: 16,
@@ -498,7 +508,7 @@ function initFilter({
 
 initFilter({
   buttonsSelector: ".portfolio__filters [data-filter]",
-  itemsSelector: ".card--portfolio",
+  itemsSelector: ".card--main",
 });
 
 initFilter({

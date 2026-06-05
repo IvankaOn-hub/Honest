@@ -69,12 +69,12 @@
       }
 
       &:hover {
-        background: rgba($color-blue, 0.035);
+        background: rgba($color-blue, 0.08);
       }
 
       &.is-active {
-        background: $color-blue;
-        color: $color-white;
+       background: rgba($color-blue, 0.08);
+      color: $color-blue;
       }
     }
   }
@@ -89,7 +89,7 @@
     font-size: .875rem;
 
     i {
-      color: $color-blue-light;
+      color: $color-blue;
     }
   }
 }

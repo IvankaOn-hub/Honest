@@ -21,4 +21,60 @@
         color: $color-blue-hover;
     }
   }
+
+  &--categories{
+    a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $gap-sm;
+    font-weight: 400;
+    padding: 0.875rem 1rem;
+    border-radius: $radius-md;
+
+    color: $color-dark-gray;
+    transition: $transition;
+
+    &:hover,
+    &.is-active {
+      background: rgba($color-blue, 0.08);
+      color: $color-blue;
+    }
+
+    &__count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 1.5rem;
+      height: 1.5rem;
+
+      border-radius: 50%;
+      background: rgba($color-blue, 0.08);
+      font-size: 0.75rem;
+    }
+  }
+  }
+
+  &--tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    a {
+    padding: 0.5rem 0.875rem;
+    border-radius: $radius-sm;
+
+    background: rgba($color-blue, 0.08);
+    color: $color-black;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    transition: $transition;
+
+    &:hover {
+      background: $color-blue;
+      color: $color-white;
+    }
+  }
+  }
 }
